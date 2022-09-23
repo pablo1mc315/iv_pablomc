@@ -23,3 +23,8 @@ Principalmente porque, si guardásemos todas las películas en nuestro disco loc
 ## Principal problema que podemos encontrar
 
 En mi opinión, pienso que el principal problema de esta idea es el conseguir una base de datos de películas que nos permitan desarrollar una app completa. Una solución a esto si no encontramos lo que buscamos, puede ser crear nuestro propio servidor y añadir ciertas películas que descarguemos, y acceder a él desde la aplicación.
+
+## Configuración del repositorio y claves objetivo 0
+
+* [Captura de pantalla del fichero de configuración de la carpeta .git del repositorio](./img/config.png)
+* [Captura de pantalla de la configuración de las claves pública y privada](./img/claves.png)
