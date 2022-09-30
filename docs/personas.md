@@ -16,4 +16,4 @@ Debido al poco tiempo libre que le permite su horario, le resulta de mucha ayuda
 
 Mujer, 19 años, estudiante del turno de mañana. Uso diario de la tecnología tanto en teléfono móvil, ordenador, tablets, etc.
 
-En ciertas épocas del año, sobre todo en verano y períodos vacacionales, le gusta pasar tardes o días completos haciendo maratones de sagas de películas, por lo que cuando termina de ver una, le viene muy bien que le aparezca una recomendación del siguiente título de esa misma saga
+En ciertas épocas del año, sobre todo en verano y períodos vacacionales, le gusta pasar tardes o días completos haciendo maratones de sagas de películas, por lo que cuando termina de ver una, le viene muy bien que le aparezca una recomendación del siguiente título de esa misma saga.
