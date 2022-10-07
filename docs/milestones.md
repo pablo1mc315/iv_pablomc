@@ -1,6 +1,6 @@
 # Milestones
 
-* [[M0] Creación de una estructura de datos que represente los datos de la aplicación.](https://github.com/pablo1mc315/iv_pablomc/milestone/1)
+* [[M0] Fichero que contenga una estructura de datos que represente las películas.](https://github.com/pablo1mc315/iv_pablomc/milestone/1)
 
 Diseñar una estructura de datos que nos permita almacenar las películas con todos los datos necesarios de cada una (título, género, fecha de salida, duración, listado de actores principales, si ya se ha visto o no, etc.
 
