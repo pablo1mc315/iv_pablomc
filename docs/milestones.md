@@ -20,6 +20,6 @@ A su vez, este sistema de búsqueda almacenará información de las mismas que s
 
 Diseño e implementación del sistema de recomendaciones de películas (esto es, básicamente, la implementacion de la lógica de negocio de nuestra aplicación) en función de los datos obtenidos en el M1 de la estructura de datos, basándonos en los datos que nos ofrece el sistema de búsqueda implementado en el M2.
 
-* [[M4] Implementación de la interfaz de usuario.](https://github.com/pablo1mc315/iv_pablomc/milestone/5)
+* [[M4] Implementación de una funcionalidad que permita ver películas al usuario.](https://github.com/pablo1mc315/iv_pablomc/milestone/5)
 
-Diseño e implementación de una interfaz de usuario minimalista, visual y cómoda para el usuario, apta para todos los públicos y rangos de edad, ya que, como podemos comprobar en las historias de usuario, nuestra aplicación la utilizarán usuarios de todo tipo.
+Diseño e implementación de una funcionalidad de nuestra aplicación que muestre las películas recomendadas en el M3 y que permita al usuario reproducir la película que desee.
