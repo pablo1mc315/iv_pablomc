@@ -1,9 +1,9 @@
 # Historias de Usuario
 
-* [[HU0] Manuel quiere ver películas recien estrenadas.](https://github.com/pablo1mc315/iv_pablomc/issues/3)
+* [[HU0] Manuel quiere que la aplicación le recomiende películas en función a sus géneros favoritos.](https://github.com/pablo1mc315/iv_pablomc/issues/3)
 
-Manuel, debido a que consume gran cantidad de películas, necesita que la aplicación le recomiende nuevos títulos que se acaben de estrenar para no aburrirse viendo siempre las mismas una y otra vez.
+Manuel, gran amante de las películas de acción, quiere que la aplicación le muestre títulos de este género ya que es el que suele buscar/consumir en la aplicación, y no otros de otros géneros que no le gustan nada, como las de terror.
 
-* [[HU1] Ángela quiere ver películas que pertenezcan a sagas.](https://github.com/pablo1mc315/iv_pablomc/issues/5)
+* [[HU1] Ángela quiere ver películas en las que aparezcan los actores que más le gustan.](https://github.com/pablo1mc315/iv_pablomc/issues/5)
 
-Ángela, las pocas veces que accede a nuestra aplicación, suele pasarse todo el día viendo películas. Para ello, la aplicación debe basarse en sus gustos y mostrarle películas que pertenezcan a sagas largas, como por ejemplo Star Wars, Harry Potter, etc.
+Ángela quiere ver películas en las que aparezcan sus actores favoritos en función a las películas que ya ha visto, por lo que quiere que le aparezcan como recomendaciones películas de los mismos que no haya visto para minimizar el tiempo que tiene que estar buscando películas en las que aparezcan.
