@@ -1,5 +1,5 @@
 /**
- * Implementación de clase UserCollection
+ * Implementación de clase FilmCollection
  */
 
 class FilmCollection
