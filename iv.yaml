@@ -1,2 +1,8 @@
 lenguaje: node.js
-entidad: src/
+entidad: 
+  - src/user.js
+  - src/film.js
+  - src/user_collection.js
+  - src/film_collection.js
+  - src/suggestions.js
+  
