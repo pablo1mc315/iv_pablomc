@@ -1,6 +1,5 @@
 /**
- * Implementación de clase Suggestions
- * De 1 (usuario) a muchos (peliculas)
+ * Implementación de clase Suggestions, implementa a logica de negocio.
  */
 
 class Suggestions
@@ -8,11 +7,11 @@ class Suggestions
     /**
      * Metodos
      * @param {Array} films
-     * @param {String} user
+     * @param {Array} users
      */
-    constructor(films,user)
+    constructor(films,users)
     {
         this.films = films;
-        this.user = user;
+        this.users = users;
     }
 }

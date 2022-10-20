@@ -7,19 +7,17 @@
     /**
      * Metodos
      * @param {String} title
-     * @param {String} id
      * @param {Number} year
      * @param {String} description 
-     * @param {String} genre
+     * @param {Array} genres
      * @param {Array} actors
      */
-    constructor(title,id,year,description,genre,actors)
+    constructor(title,year,description,genres,actors)
     {
         this.title = title;
-        this.id = id;
         this.year = year;
         this.description = description;
-        this.genre = genre;
+        this.genres = genres;
         this.actors = actors;
     }
  }
