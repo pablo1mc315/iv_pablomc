@@ -26,13 +26,11 @@
          this.genres = genres;
          this.actors = actors;
      }
- 
- }
- 
- //Función que pone título a una película
- function setTittle(title)
+
+     //Función que pone título a una película
+ setTitle(title)
  {
-     if(title != 0)
+     if(title.trim().length != 0)
      {
          this.title = title;
      }
@@ -43,7 +41,7 @@
  }
  
  //Función que asigna anio a una pelicula
- function setYear(year)
+ setYear(year)
  {
      if(year >= minYear && year <= maxYear)
      {
@@ -56,9 +54,9 @@
  }
  
  //Funcion que aniade descripcion a una pelicula
- function setDescription(description)
+ setDescription(description)
  {
-     if(description != 0)
+     if(description.trim().length  != "")
      {
          this.description = description;
      }
@@ -69,7 +67,7 @@
  }
  
  //Funcion que aniade un conjunto de generos a una pelicula
- function setGenres(newGenres)
+ setGenres(newGenres)
  {
      var error = false;
      for (let index = 0; index < newGenres.length && !error; index++) 
@@ -87,9 +85,9 @@
  }
  
  //Funcion que asigna a la pelicula un conjunto de actores
- function setActors(newActors)
+ setActors(newActors)
  {
-     if(newActors != 0)
+     if(newActors.trim().length  != "")
      {
          this.actors = newActors;
      }
@@ -100,7 +98,7 @@
  }
  
  //Funcion que aniade un genero a la pelicula 
- function addGenre(genre)
+ addGenre(genre)
  {
      if(genresEnum.has(genre))
      {
@@ -113,9 +111,9 @@
  }
  
  //Funcion que aniade un actor a la pelicula
- function addActor(actor)
+ addActor(actor)
  {
-     if(actor != 0)
+     if(actor.trim().length  != "")
      {
          this.actors.push(actor);
      }
@@ -126,9 +124,9 @@
  }
  
  //Funcion que elimina un genero
- function delGenre(genre)
+ delGenre(genre)
  {
-     if(this.genres.has(genre))
+     if(this.genres.includes(genre))
      {
          let auxGenres = new Array();
          for (let index = 0; index < this.genres.length; index++) 
@@ -147,9 +145,9 @@
  }
  
  //Funcion que elimina un actor
- function delActor(actor)
+ delActor(actor)
  {
-     if(this.actors.has(actor))
+     if(this.actors.includes(actor))
      {
          let auxActors = new Array();
          for (let index = 0; index < this.actors.length; index++) 
@@ -166,5 +164,8 @@
          throw new ValidationError("Invalid actor");
      }
  }
+ }
+ module.exports = Film;
+
  
  

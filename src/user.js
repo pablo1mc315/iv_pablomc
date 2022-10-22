@@ -4,7 +4,7 @@
  * 
  */
 const genresEnum = require("../models/genresEnum.js");
-const ValidationError= require("../error/validationError.js");
+const ValidationError = require("../error/validationError.js");
  
  const current_date = 2022;
  
@@ -70,9 +70,9 @@ const ValidationError= require("../error/validationError.js");
        var error = false;
        for (let index = 0; index < newFilms.length && !error; index++) 
        {
-           if(!this.films.hasFilm(newFilms[index]))
+           if(!this.hasFilm(newFilms[index]))
            {
-               aux = {name: newFilms.title, date: current_date};
+               var aux = {name: newFilms.title, date: current_date};
                this.films.push(aux);
            }
            else
@@ -107,7 +107,7 @@ const ValidationError= require("../error/validationError.js");
    //Funcion que elimina una pelicula
    delFilm(film)
    {
-       if(this.films.hasFilm(film))
+       if(this.hasFilm(film))
        {
            let auxFilms = new Array();
            for (let index = 0; index < this.films.length; index++) 
@@ -137,6 +137,21 @@ const ValidationError= require("../error/validationError.js");
            throw new ValidationError("Invalid genre");
        }
    }
+
+   //Funcion que aniade una pelicula al usuario
+   addFilm(film)
+   {
+        if(!this.hasFilm(film))
+        {
+            var aux = {name: film.title, date: current_date};
+            this.films.push(aux);
+        }
+        else
+        {
+            throw new ValidationError("Invalid film");
+        }
+    }
+   
  }
  
  module.exports = User;
