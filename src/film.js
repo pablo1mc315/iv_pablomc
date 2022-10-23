@@ -72,7 +72,7 @@
      var error = false;
      for (let index = 0; index < newGenres.length && !error; index++) 
      {
-         if(genresEnum.has(newGenres[index]))
+         if(genresEnum.has(newGenres[index]) && !this.genres.includes(newGenres[index]))
          {
              this.genres.push(newGenres[index]);
          }
@@ -87,20 +87,25 @@
  //Funcion que asigna a la pelicula un conjunto de actores
  setActors(newActors)
  {
-     if(newActors.trim().length  != "")
-     {
-         this.actors = newActors;
-     }
-     else
-     {
-         throw new ValidationError("Invalid actors");
-     }
+    var error = false;
+    for (let index = 0; index < newActors.length && !error; index++) 
+    {
+        if(newActors.trim().length != 0 && !this.actors.includes(newActors[index]))
+        {
+            this.actors.push(newActors[index]);
+        }
+        else
+        {
+            error = true;
+            throw new ValidationError("Invalid genre");
+        }
+    }
  }
  
  //Funcion que aniade un genero a la pelicula 
  addGenre(genre)
  {
-     if(genresEnum.has(genre))
+     if(genresEnum.has(genre) && !this.genres.includes(genre))
      {
          this.genres.push(genre);
      }
@@ -113,7 +118,7 @@
  //Funcion que aniade un actor a la pelicula
  addActor(actor)
  {
-     if(actor.trim().length  != "")
+     if(actor.trim().length  != "" && !this.actors.includes(actor))
      {
          this.actors.push(actor);
      }
