@@ -1,8 +1,9 @@
 lenguaje: node.js
-entidad: 
+objeto valor: 
   - src/user.js
   - src/film.js
   - src/user_collection.js
   - src/film_collection.js
+entidad:
   - src/suggestions.js
   
