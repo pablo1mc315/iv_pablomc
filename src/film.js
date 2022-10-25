@@ -36,19 +36,6 @@ class Film
             throw new Error("Invalid title");
         }
     }
- 
-    //Función que asigna anio a una pelicula
-    setYear(year)
-    {
-        if(year >= minYear && year <= maxYear)
-        {
-            this.year = year;
-        }
-        else
-        {
-            throw new Error("Invalid year");
-        }
-    }
     
     //Funcion que aniade un conjunto de generos a una pelicula
     setGenres(newGenres)
