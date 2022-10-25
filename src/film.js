@@ -6,7 +6,8 @@ const genresSet= require("../models/genresSet.js");
 
 const minYear = 0;
 const maxYear = 2023;
-
+const date = new Date();
+const default_array = new Array();
 class Film
 {
     /**
@@ -19,9 +20,9 @@ class Film
     constructor(title,year,genres,actors)
     {
         this.title = title;
-        this.year = year;
-        this.genres = genres;
-        this.actors = actors;
+        this.year = year || date.getFullYear();
+        this.genres = genres || default_array;
+        this.actors = actors || default_array;
     }
 
     //Función que pone título a una película
