@@ -4,7 +4,6 @@
  * 
  */
 const genresEnum = require("../models/genresEnum.js");
-const ValidationError = require("../error/validationError.js");
  
 const current_date = 2022;
  
@@ -59,7 +58,7 @@ class User
             else
             {
                 error = true;
-                throw new ValidationError("Invalid genre");
+                throw new Error("Invalid genre");
             }
         }
     }
@@ -78,7 +77,7 @@ class User
             else
             {
                 error = true;
-                throw new ValidationError("Invalid film");
+                throw new Error("Invalid film");
             }
         }
     }
@@ -100,7 +99,7 @@ class User
         }
         else
         {
-            throw new ValidationError("Invalid genre");
+            throw new Error("Invalid genre");
         }
     }
     
@@ -121,7 +120,7 @@ class User
         }
         else
         {
-            throw new ValidationError("Invalid film");
+            throw new Error("Invalid film");
         }
     }
     
@@ -134,7 +133,7 @@ class User
         }
         else
         {
-            throw new ValidationError("Invalid genre");
+            throw new Error("Invalid genre");
         }
     }
 
@@ -148,7 +147,7 @@ class User
         }
         else
         {
-            throw new ValidationError("Invalid film");
+            throw new Error("Invalid film");
         }
     }
    

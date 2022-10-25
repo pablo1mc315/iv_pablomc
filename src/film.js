@@ -3,7 +3,6 @@
  */
 
 const genresEnum = require("../models/genresEnum.js");
-const ValidationError = require("../error/validationError.js");
 
 const minYear = 0;
 const maxYear = 2023;
@@ -34,7 +33,7 @@ class Film
         }
         else
         {
-            throw new ValidationError("Invalid title");
+            throw new Error("Invalid title");
         }
     }
  
@@ -47,7 +46,7 @@ class Film
         }
         else
         {
-            throw new ValidationError("Invalid year");
+            throw new Error("Invalid year");
         }
     }
     
@@ -64,7 +63,7 @@ class Film
             else
             {
                 error = true;
-                throw new ValidationError("Invalid genre");
+                throw new Error("Invalid genre");
             }
         }
     }
@@ -82,7 +81,7 @@ class Film
             else
             {
                 error = true;
-                throw new ValidationError("Invalid genre");
+                throw new Error("Invalid genre");
             }
         }
     }
@@ -96,7 +95,7 @@ class Film
         }
         else
         {
-            throw new ValidationError("Invalid genre");
+            throw new Error("Invalid genre");
         }
     }
     
@@ -109,7 +108,7 @@ class Film
         }
         else
         {
-            throw new ValidationError("Invalid actor");
+            throw new Error("Invalid actor");
         }
     }
     
@@ -130,7 +129,7 @@ class Film
         }
         else
         {
-            throw new ValidationError("Invalid genre");
+            throw new Error("Invalid genre");
         }
     }
     
@@ -151,7 +150,7 @@ class Film
         }
         else
         {
-            throw new ValidationError("Invalid actor");
+            throw new Error("Invalid actor");
         }
     }
 }
