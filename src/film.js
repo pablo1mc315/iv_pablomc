@@ -14,15 +14,13 @@ class Film
      * Metodos
      * @param {String} title
      * @param {Number} year
-     * @param {String} description 
      * @param {Array} genres
      * @param {Array} actors
      */
-    constructor(title,year,description,genres,actors)
+    constructor(title,year,genres,actors)
     {
         this.title = title;
         this.year = year;
-        this.description = description;
         this.genres = genres;
         this.actors = actors;
     }
@@ -50,19 +48,6 @@ class Film
         else
         {
             throw new ValidationError("Invalid year");
-        }
-    }
-    
-    //Funcion que aniade descripcion a una pelicula
-    setDescription(description)
-    {
-        if(description.trim().length  != "")
-        {
-            this.description = description;
-        }
-        else
-        {
-            throw new ValidationError("Invalid description");
         }
     }
     
