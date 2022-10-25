@@ -1,5 +1,5 @@
 /**
  * Implementación del enumerado de generos
  */
-const genresSet= new Set(['Action','Thriller','War','Sci-Fi','Romance','Crime','Musical','Comedy','Horror','Documentary','Western','Fantasy']);
+const genresSet= new Set(['Accion','Thriller','Guerra','Ciencia-Ficcion','Romance','Crimen','Musical','Comedia','Terror','Documental','Western','Fantasia']);
 module.exports = genresSet;
