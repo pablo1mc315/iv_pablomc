@@ -3,7 +3,7 @@
  * Clase necesaria para almacenar los atributos del usuario con los que implementaremos el objeto valor
  * 
  */
-const genresEnum = require("../models/genresEnum.js");
+const genresSet = require("../models/genresSet.js");
  
 const current_date = 2022;
  
@@ -11,7 +11,7 @@ class User
 {
     /**
      * Metodos
-     * @param {Array[genresEnum]} genres 
+     * @param {Array[genresSet]} genres 
      * Array de Peliculas, la estructura del array es de la forma:
      * @param {Array} films 
      * Donde: 
@@ -51,7 +51,7 @@ class User
         var error = false;
         for (let index = 0; index < newGenres.length && !error; index++) 
         {
-            if(genresEnum.has(newGenres[index]))
+            if(genresSet.has(newGenres[index]))
             {
                 this.genres.push(newGenres[index]);
             }
@@ -127,7 +127,7 @@ class User
     //Funcion que aniade un genero al usuario
     addGenre(genre)
     {
-        if(genresEnum.has(genre) && !this.genres.includes(genre))
+        if(genresSet.has(genre) && !this.genres.includes(genre))
         {
             this.genres.push(genre);
         }

@@ -2,7 +2,7 @@
  * Implementación de clase Film
  */
 
-const genresEnum = require("../models/genresEnum.js");
+const genresSet= require("../models/genresSet.js");
 
 const minYear = 0;
 const maxYear = 2023;
@@ -43,7 +43,7 @@ class Film
         var error = false;
         for (let index = 0; index < newGenres.length && !error; index++) 
         {
-            if(genresEnum.has(newGenres[index]) && !this.genres.includes(newGenres[index]))
+            if(genresSet.has(newGenres[index]) && !this.genres.includes(newGenres[index]))
             {
                 this.genres.push(newGenres[index]);
             }
@@ -76,7 +76,7 @@ class Film
     //Funcion que aniade un genero a la pelicula 
     addGenre(genre)
     {
-        if(genresEnum.has(genre) && !this.genres.includes(genre))
+        if(genresSet.has(genre) && !this.genres.includes(genre))
         {
             this.genres.push(genre);
         }
