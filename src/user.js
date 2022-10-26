@@ -5,7 +5,7 @@
  */
 const genresSet = require("../models/genresSet.js");
  
-const current_date = 2022;
+const date = new Date();
  
 class User
 {
@@ -71,7 +71,7 @@ class User
         {
             if(!this.hasFilm(newFilms[index]))
             {
-                var aux = {name: newFilms.title, date: current_date};
+                var aux = {name: newFilms.title, date: date.getFullYear()};
                 this.films.push(aux);
             }
             else
@@ -142,7 +142,7 @@ class User
     {
         if(!this.hasFilm(film))
         {
-            var aux = {name: film.title, date: current_date};
+            var aux = {name: film.title, date: date.getFullYear()};
             this.films.push(aux);
         }
         else

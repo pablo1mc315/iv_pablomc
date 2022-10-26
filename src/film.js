@@ -19,15 +19,7 @@ class Film
      */
     constructor(title,year,genres,actors)
     {
-        this.title = title;
-        this.year = year || date.getFullYear();
-        this.genres = genres || default_array;
-        this.actors = actors || default_array;
-    }
-
-    //Función que pone título a una película
-    setTitle(title)
-    {
+        //Asignamos title
         if(title.trim().length != 0)
         {
             this.title = title;
@@ -36,111 +28,56 @@ class Film
         {
             throw new Error("Invalid title");
         }
-    }
-    
-    //Funcion que aniade un conjunto de generos a una pelicula
-    setGenres(newGenres)
-    {
-        var error = false;
-        for (let index = 0; index < newGenres.length && !error; index++) 
+        //Asignamos year
+        this.year = year || date.getFullYear();
+        //Asignamos genres
+        if(genres)
         {
-            if(genresSet.has(newGenres[index]) && !this.genres.includes(newGenres[index]))
+            var error = false;
+            for (let index = 0; index < genres.length && !error; index++) 
             {
-                this.genres.push(newGenres[index]);
-            }
-            else
-            {
-                error = true;
-                throw new Error("Invalid genre");
-            }
-        }
-    }
-    
-    //Funcion que asigna a la pelicula un conjunto de actores
-    setActors(newActors)
-    {
-        var error = false;
-        for (let index = 0; index < newActors.length && !error; index++) 
-        {
-            if(newActors.trim().length != 0 && !this.actors.includes(newActors[index]))
-            {
-                this.actors.push(newActors[index]);
-            }
-            else
-            {
-                error = true;
-                throw new Error("Invalid genre");
-            }
-        }
-    }
-    
-    //Funcion que aniade un genero a la pelicula 
-    addGenre(genre)
-    {
-        if(genresSet.has(genre) && !this.genres.includes(genre))
-        {
-            this.genres.push(genre);
-        }
-        else
-        {
-            throw new Error("Invalid genre");
-        }
-    }
-    
-    //Funcion que aniade un actor a la pelicula
-    addActor(actor)
-    {
-        if(actor.trim().length  != "" && !this.actors.includes(actor))
-        {
-            this.actors.push(actor);
-        }
-        else
-        {
-            throw new Error("Invalid actor");
-        }
-    }
-    
-    //Funcion que elimina un genero
-    delGenre(genre)
-    {
-        if(this.genres.includes(genre))
-        {
-            let auxGenres = new Array();
-            for (let index = 0; index < this.genres.length; index++) 
-            {
-                if(this.genres[index] != genre)
+                if(genresSet.has(genres[index]) && !this.genres.includes(genres[index]))
                 {
-                    auxGenres.push(this.genres[index]);
+                    this.genres.push(genres[index]);
+                }
+                else
+                {
+                    error = true;
+                    //Asignamos a genres un array vacio
+                    this.genres = default_array;
+                    throw new Error("Invalid genre");
                 }
             }
-            this.genres = auxGenres;
         }
         else
         {
-            throw new Error("Invalid genre");
+            this.genres = default_array;
         }
-    }
-    
-    //Funcion que elimina un actor
-    delActor(actor)
-    {
-        if(this.actors.includes(actor))
+        //Asignamos actors
+        if(actors)
         {
-            let auxActors = new Array();
-            for (let index = 0; index < this.actors.length; index++) 
+            var error = false;
+            for (let index = 0; index < actors.length && !error; index++) 
             {
-                if(this.actors[index] != actor)
+                if(actors.trim().length != 0 && !this.actors.includes(actors[index]))
                 {
-                    auxActors.push(this.actors[index]);
+                    this.actors.push(actors[index]);
+                }
+                else
+                {
+                    error = true;
+                    //Asignamos a actors un array vacio
+                    this.actors = default_array;
+                    throw new Error("Invalid actor");
                 }
             }
-            this.actors = auxActors;
         }
         else
         {
-            throw new Error("Invalid actor");
+            this.actors = default_array;
         }
     }
+
 }
 
 module.exports = Film;
