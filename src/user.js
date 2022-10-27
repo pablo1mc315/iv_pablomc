@@ -16,22 +16,20 @@ class User
      */
     constructor(genres,films)
     {
-        //Creamos fecha
-        var date = new Date();
         //Asignamos genres
-        this.genres = genres;
+        this.genres = genres || [];
         //Asignamos peliculas
         if(films)
         {
             for (let index = 0; index < films.length; index++) 
             {
-                var aux = {name: films[index].title, date: date.getFullYear()};
+                var aux = {name: films[index].title, date: (new Date()).getFullYear()};
                 this.films.push(aux);
             }
         }
         else
         {
-            throw new Error('No films provided')
+            this.films = [];
         }
     }
  }
