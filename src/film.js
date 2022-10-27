@@ -13,9 +13,6 @@ class Film
      */
     constructor(title,year,genres,actors)
     {
-        
-        var date = new Date();
-        var default_array = new Array();
         //Asignamos title
         if(title.trim().length != 0)
         {
@@ -28,11 +25,11 @@ class Film
             throw new Error("Invalid title");
         }
         //Asignamos year
-        this.year = year || date.getFullYear();
+        this.year = year || (new Date()).getFullYear();
         //Asignamos genres
-        this.genres = genres || default_array;
+        this.genres = genres || [];
         //Asignamos actors
-        this.actors = actors || default_array;
+        this.actors = actors || [];
     }
 }
 
