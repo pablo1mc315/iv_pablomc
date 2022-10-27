@@ -16,6 +16,7 @@ class User
      */
     constructor(genres,films)
     {
+        //Creamos fecha
         var date = new Date();
         //Asignamos genres
         this.genres = genres;
