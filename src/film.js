@@ -11,7 +11,7 @@ class Film
      * @param {Array} genres
      * @param {Array} actors
      */
-    constructor(title,year,genres,actors)
+    constructor(title,year = (new Date()).getFullYear(),genres ,actors)
     {
         //Asignamos title
         if(title.trim().length != 0)
@@ -25,11 +25,28 @@ class Film
             throw new Error("Invalid title");
         }
         //Asignamos year
-        this.year = year || (new Date()).getFullYear();
+        this.year = year;
         //Asignamos genres
-        this.genres = genres || [];
+        if(genres)
+        {
+            this.genres = genres;
+        }
+        else
+        {
+            //Lanzamos error porque los generos de una pelicula son imprescindibles
+            throw new Error("Genres are a must");
+        }
         //Asignamos actors
-        this.actors = actors || [];
+        if(actors)
+        {
+            this.actors = actors;
+        }
+        else
+        {
+            //Lanzamos error porque los actores de una pelicula son imprescindibles
+            throw new Error("Actors are a must");
+        }
+
     }
 }
 
