@@ -14,12 +14,14 @@ class User
      * Donde: 
      * films = [{name: 'Manolito Gafotas', date: 2014}, {name: 'Mafalda', date: 2017}];
      */
+
     constructor(genres,films)
     {
-        //Asignamos genres
+        // Asignamos genres
         this.genres = genres || [];
-        //Asignamos peliculas
-        if(films)
+
+        // Asignamos peliculas
+        if (films)
         {
             for (let index = 0; index < films.length; index++) 
             {
@@ -28,9 +30,7 @@ class User
             }
         }
         else
-        {
             this.films = [];
-        }
     }
  }
  
