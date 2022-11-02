@@ -1,2 +1,7 @@
 lenguaje: node.js
+
 entidad: user.js
+
+automatizacion:
+  fichero: Makefile
+  orden: make
