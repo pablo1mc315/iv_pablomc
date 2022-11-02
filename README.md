@@ -29,6 +29,8 @@ En mi opinión, pienso que el principal problema de esta idea es el conseguir un
 * [Usuarios](./docs/personas.md)
 * [Milestones](./docs/milestones.md)
 * [Historias de usuario](./docs/historias-usuario.md)
+* [Gestor de dependencias](./docs/gestor-dependencias.md)
+* [Gestor de tareas](./docs/gestor-tareas.md)
 
 ## Configuración del repositorio y claves objetivo 0
 
