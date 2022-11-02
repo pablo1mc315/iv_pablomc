@@ -21,6 +21,6 @@ Es una librería JavaScript que nos permite aislar mediante módulos los compone
 
 Es un gestor de paquetes que funciona en el navegador. Se trata de un gestor de paquetes de JavaScript gestión automática similar a RequireJS. Todas sus dependencias son introducidas en un único archivo JavaScript que permite agregar y quitar elementos de manera sencilla. Además estos pueden ser actualizados en el navegador sin tener en cuenta otras herramientas que se estén utilizando, además de ser de código abierto. Sin embargo, no tiene demasiada documentación ni está tan extendido como los demás.
 
-## Gestores de dependencias elegido:
+## Gestor de dependencias elegido:
 
 Tenía la duda entre npm y Yarn, ya que el segundo es más moderno y soluciona problemas que se encontraron en el primero, pero, finalmente, me he decantado por npm ya que las diferencias que hay entre ambos se han reducido notablemente en la actualización a npm 5. Además, las diferencias que hay entre ellos no afectan demasiado a la hora de un proyecto como el que nos atañe, aunque quizás sí se verían reflejadas en proyectos mucho más grandes que necesiten gran cantidad de dependencias.
