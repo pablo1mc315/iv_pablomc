@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/pablo1mc315/iv_pablomc/issues"
   },
-  "homepage": "https://github.com/pablo1mc315/iv_pablomc#readme"
+  "homepage": "https://github.com/pablo1mc315/iv_pablomc#readme",
+  "dependencies": {
+    "make": "^0.0.0"
+  }
 }
