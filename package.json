@@ -3,9 +3,6 @@
   "version": "0.3.1",
   "description": "Proyecto IV 22-23",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "check": "make check"
   },
@@ -15,10 +12,6 @@
   },
   "author": "Pablo Muñoz Castro",
   "license": "GNU General Public License v3.0",
-  "bugs": {
-    "url": "https://github.com/pablo1mc315/iv_pablomc/issues"
-  },
-  "homepage": "https://github.com/pablo1mc315/iv_pablomc#readme",
   "dependencies": {
     "make": "^0.0.0"
   }
