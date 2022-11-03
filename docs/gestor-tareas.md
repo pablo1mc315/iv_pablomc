@@ -18,10 +18,6 @@ Al igual que Grunt, se basa en la plataforma de JavaScript Node.js. También rec
 
 Es la más antigua, aunque sigue siendo una de las herramientas más populares. Es una herramienta para generar archivos a partir de otros archivos, por ejemplo, ejecutables desde el código fuente, pero también puede realizar otras operaciones como ejecutar otras herramientas y comandos. A diferencia de Gulp o Grunt , make no necesita complementos ni tiempo de ejecución especial de JavaScript, ya que simplemente debemos describir la tarea usando un conjunto de comandos de shell, y se puede usar en cualquier lenguaje.
 
-### Bun
-
-Es un runtime de JavaScript construido desde cero para centrarse principalmente en la velocidad y el rendimiento. El objetivo de Bun es brindar mejoras de rendimiento y complejidad a su infraestructura futura, así como la productividad del desarrollador a través de herramientas mejores y más simples.
-
 ## Gestor de tareas elegido
 
-Me he decantado por make, ya que es una herramienta que he utilizado a lo largo de la carrera y nunca le he sacado todo su potencial. Además, tiene una gran cantidad de documentación al ser el más antiguo de todos y permite programar muchas opciones y tareas que pueden ser útiles en el proyecto.
+Me he decantado por make, ya que es una herramienta que he utilizado a lo largo de la carrera y nunca le he sacado todo su potencial. Además, tiene una gran cantidad de documentación al ser el más antiguo de todos, su comunidad es bastante grande, tiene buen mantenimiento y permite programar una gran cantidad de tareas distintas.
