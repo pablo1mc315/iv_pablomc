@@ -10,16 +10,15 @@ Es la herramienta por defecto de JavaScript para la tarea de compartir e instala
 
 Es un gestor dependencias de JavaScript, basado en npm, que está muy enfocado en la velocidad y la seguridad, muy rápido y muy fácil de usar. Además, devuelve un feedback al usuario bastante amigable. Las principales diferencias que tiene respecto a npm a tener en cuenta son:
 
-Tiene un chequeador de licencias, que puede ser útil para saber exactamente qué permiten los paquetes que estamos usando, entre otras cosas.
-Es mucho más rápido a la hora de instalar los paquetes, lo cual es uno de los principales motivos por el cual se utiliza, pero un proyecto no demasiado grande como este, no afecta demasiado.
+- Tiene un chequeador de licencias, que puede ser útil para saber exactamente qué permiten los paquetes que estamos usando, entre otras cosas.
+- Es mucho más rápido a la hora de instalar los paquetes, lo cual es uno de los principales motivos por el cual se utiliza, pero un proyecto no demasiado grande como este, no afecta demasiado.
+- Sin embargo, no es el mejor en cuanto a mantenimiento se refiere.
 
-### RequireJS:
+### pNpm
 
-Es una librería JavaScript que nos permite aislar mediante módulos los componentes de nuestra aplicación cliente y resolver las dependencias de estos mismos. Sus principales características son la carga dinámica de dependencias, el manejo de timeouts y la carga de fallbacks (opción alternativa que se seguirá solo si la opción principal falla). No tiene tanta documentación como los demás.
+Es un gestor de dependencias que usa los formatos de configuración de npm pero, a diferencia de este y de Yarn, ahorra mucho espacio en disco proporcional a la cantidad de proyectos y dependencias y tiene instalaciones muy rápidas. Su tabla de comandos es muy parecida a la de npm.
 
-### JamJS
-
-Es un gestor de paquetes que funciona en el navegador. Se trata de un gestor de paquetes de JavaScript gestión automática similar a RequireJS. Todas sus dependencias son introducidas en un único archivo JavaScript que permite agregar y quitar elementos de manera sencilla. Además estos pueden ser actualizados en el navegador sin tener en cuenta otras herramientas que se estén utilizando, además de ser de código abierto. Sin embargo, no tiene demasiada documentación ni está tan extendido como los demás.
+No se le reconocen problemas graves de seguridad y es muy popular entre desarrolladores JavaScript, por lo que tiene una comunidad muy activa y un mantenimiento continuo. Sin embargo, tiene menos documentación que los dos anteriores.
 
 ## Gestor de dependencias elegido:
 
