@@ -16,5 +16,8 @@ SRC = ./src
 all : check
 
 # Comprobación de la sintaxis de los ficheros fuente
-check : 
-	node --check $(SRC)/*.js
+check :
+	@echo
+	@echo Comprobando sintaxis del código fuente...
+	@echo
+	node --check $(SRC)/film.js $(SRC)/user.js
