@@ -1,10 +1,22 @@
 # Gestor de dependencias
 
-## Gestores de dependencias a investigar a partir los cuales elegir:
+## Criterios de búsqueda de un gestor de dependencias:
+
+Los gestores de dependencias son herramientas específicas para llevar a cabo la instalación de todas las necesarias de un proyecto en un lenguaje determinado. Para elegir uno para nuestra aplicación, se establecen los siguientes criterios:
+
+- Que sea un gestor de dependencias de JavaScript, a ser posible basado en NodeJS.
+- Que utilice el fichero de dependencias package.json (buenas prácticas).
+- No necesariamente debe funcionar muy bien para proyectos muy grandes, puesto que este no lo es.
+- Que tenga buena documentación.
+
+## Gestores de dependencias que cumplen los criterios:
 
 ### npm
 
-Es la herramienta por defecto de JavaScript para la tarea de compartir e instalar paquetes. Nos permite gestionar tanto dependencias como tareas (como hemos visto en #27). A pesar de ser el más utilizado desde hace años, tiene dos principales problemas: es lento y el orden de instalación de las dependencias no es predecible, aunque estos no son realmente problemas importantes en proyectos pequeños, pero sí lo son cuando se manejan proyectos de gran tamaño entre muchas personas.
+(Node Package Manager) Como su nombre lo indica, es el gestor de paquetes de NodeJS, y permite instalar, actualizar y publicar las dependencias y paquetes tanto públicas como privadass de la comunidad de NodeJS. Nos permite gestionar tanto dependencias como tareas, aunque en menor medida (como hemos visto en #27).
+
+- A pesar de ser el más utilizado desde hace años, tiene dos principales problemas: es lento y el orden de instalación de las dependencias no es predecible, aunque estos no son realmente problemas importantes en proyectos pequeños, pero sí lo son cuando se manejan proyectos de gran tamaño entre muchas personas.
+- Tiene gran cantidad de documentación, ya que es el más estandarizado y el más utilizado por la comunidad.
 
 ### Yarn
 
@@ -22,4 +34,8 @@ No se le reconocen problemas graves de seguridad y es muy popular entre desarrol
 
 ## Gestor de dependencias elegido:
 
-Tenía la duda entre npm y Yarn, ya que el segundo es más moderno y soluciona problemas que se encontraron en el primero, pero, finalmente, me he decantado por npm ya que las diferencias que hay entre ambos se han reducido notablemente en la actualización a npm 5. Además, las diferencias que hay entre ellos no afectan demasiado a la hora de un proyecto como el que nos atañe, aunque quizás sí se verían reflejadas en proyectos mucho más grandes que necesiten gran cantidad de dependencias.
+Tenía la duda entre npm y Yarn, ya que el segundo es más moderno y soluciona problemas que se encontraron en el primero, pero, finalmente, me he decantado por npm ya que las diferencias que hay entre ambos se han reducido notablemente en la actualización a npm 5. 
+
+Además, pienso que las diferencias que hay entre ellos no afectan demasiado a la hora de un proyecto como el que nos atañe, aunque quizás sí se verían reflejadas en proyectos mucho más grandes que necesiten gran cantidad de dependencias. 
+
+Otro motivo por el que elijo npm y no los otros dos es, principalmente, porque es el más utilizado, por lo que es mucho más fácil encontrar posibles errores que se me planteen trabajando con él y poder solucionarlos.
