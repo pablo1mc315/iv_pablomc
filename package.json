@@ -11,5 +11,15 @@
     "url": "git+https://github.com/pablo1mc315/iv_pablomc.git"
   },
   "author": "Pablo Muñoz Castro",
-  "license": "GNU General Public License v3.0"
+  "license": "GNU General Public License v3.0",
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.5.0",
+    "eslint-plugin-promise": "^6.1.1"
+  },
+  "rules": {
+    "no-unused-vars":"off"
+  }
 }

@@ -20,4 +20,4 @@ check :
 	@echo
 	@echo Comprobando sintaxis del código fuente...
 	@echo
-	node --check $(SRC)/film.js $(SRC)/user.js
+	npx eslint src/*.js
