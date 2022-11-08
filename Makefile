@@ -20,4 +20,4 @@ check :
 	@echo
 	@echo Comprobando sintaxis del código fuente...
 	@echo
-	npx eslint src/*.js
+	npx eslint $(SRC)/*.js
