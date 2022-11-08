@@ -8,23 +8,21 @@ Un gestor de tareas es una herramienta necesaria para la ejecución de los tarea
 - Que gestione todas las tareas desde un único fichero donde se incluyan todas ellas de manera organizada.
 - Que esté actualizado y tenga un continuo mantenimiento, para que nuestra aplicación no quede obsoleta en un futuro.
 
+Estos criterios se cumplen en todos los gestores mencionados a continuación.
+
 ## Gestores de tareas a investigar a partir los cuales elegir:
 
 ### npm
 
-Viene incorporado en NodeJS y, como ya se ha explicado en #26, funciona tanto como gestor de tareas como gestor de dependencias. Hay dos tipos de tareas con npm, tareas integradas (las que son comunes a la mayoría de los proyectos, como `test` o `install`) y tareas propias (aquellas que nos permite crear npm mediante scripts propios). Sin embargo, no es muy común utilizarlo de esta forma, ya que hay herramientas que son gestores de tareas específicos y mucho más completos y con mas funcionalidades.
+Viene incorporado en NodeJS y, como ya se ha explicado en [#26](https://github.com/pablo1mc315/iv_pablomc/issues/26), funciona tanto como gestor de tareas como gestor de dependencias. Hay dos tipos de tareas con npm, tareas integradas (las que son comunes a la mayoría de los proyectos, como `test` o `install`, que vienen predefinidas por el propio gestor) y tareas propias (aquellas que nos permite crear npm mediante scripts propios). Sin embargo, no es muy común utilizarlo de esta forma, ya que hay herramientas que son gestores de tareas específicos y mucho más completos y con mas funcionalidades.
 
 ### Grunt
 
-Se basa en el entorno en tiempo de ejecución NodeJS de JavaScript. Guarda toda la información en el archivo gruntfile.js, donde se incluye el código original con el que se integran y configuran los módulos de cada una de las tareas. Grunt utiliza principalmente el módulo fs (file system) del entorno de NodeJS Además, Grunt está estrictamente orientado a los archivos, creándolos de forma temporal y local como resultado de las tareas ejecutadas. 
-
-Es un gestor de tareas bastante actualizado y con una comunidad muy activa, lo cual lo convierte en una muy buena opción a la hora de elegirlo como gestor de tareas.
+Guarda toda la información en el archivo gruntfile.js, donde se incluye el código con el que se integran y configuran los módulos de cada una de las tareas. Está estrictamente orientado a los archivos, creándolos de forma temporal y local como resultado de las tareas ejecutadas. Es un gestor de tareas bastante actualizado y con una comunidad muy activa, lo cual le da un plus a la hora de elegirlo como gestor de tareas.
 
 ### Gulp
 
-Al igual que Grunt, se basa en el entorno de NodeJS. El fichero para integrar las tareas es gulpfile.js, que especifica las tareas posibles. Cada proceso se ejecuta en su mayor parte en la memoria principal antes de que el resultado se escriba de nuevo en cada archivo, lo cual le da un excelente rendimiento, además de que también existen plugins con gran cantidad de tareas ya preparadas. Es mucho más útil para proyectos grandes y complejos. Por el contrario, Gulp lleva a cabo los procesos en la memoria principal y escribe directamente en los archivos, lo que proporciona una mayor velocidad al programa.
-
-Es una buena opción, ya que cumple con los requisitos que deseamos, aunque no es precisamente el mejor en temas de seguridad ya que se le ha descuidado un poco ese aspecto, lo cual contrarresta sus ventajas en cuanto a velocidad y rendimeinto.
+El fichero para integrar las tareas es gulpfile.js, que especifica las tareas posibles. Cada proceso se ejecuta en su mayor parte en la memoria principal antes de que el resultado se escriba de nuevo en cada archivo, lo cual le mayor velocidad, por lo que es mucho más útil para proyectos grandes y complejos. No es precisamente el mejor en temas de seguridad ya que se le ha descuidado un poco ese aspecto, lo cual contrarresta sus ventajas en cuanto a rendimiento.
 
 ### make
 
@@ -32,4 +30,4 @@ Es la más antigua, aunque sigue siendo una de las herramientas más populares. 
 
 ## Gestor de tareas elegido
 
-Me he decantado por make, ya que es una herramienta muy utilizada (con la que, además, ya he trabajado anteriormente) y permite muchas otras opciones además de ejecutar tareas de forma muy eficiente. Además, nos vamos a basar en la ejecución de comandos en shell, para lo cual make es la mejor opción sin ninguna duda. Es la más antigua y tiene una enorme comunidad, además de no estar para nada desactualizada, lo cual hace que se siga utilizando actualmente, por lo que podemos garantizar que el proyecto no quedará desactualizado en este aspecto y podemos encontrar gran cantidad de documentación que nos permitirá tanto implementar tareas en el makefile como solucionar posibles problemas que se nos puedan plantear con el mismo.
+Me he decantado por make ya que, además de ser una herramienta con la que ya he trabajado anteriormente, permite muchas otras opciones además de ejecutar tareas de forma muy eficiente, como implementar funciones para, por ejemplo, comprobar si la versión de Node que estamos utilizando es la deseada para nuestra aplicación y avisarnos antes de que nos de algún otro error debido a ello. Como hemos dicho, tiene una enorme comunidad, además de no estar para nada desactualizada, lo cual hace que se siga utilizando actualmente, por lo que podemos garantizar que el proyecto no quedará desactualizado en este aspecto y podemos encontrar gran cantidad de documentación que nos permitirá tanto implementar tareas en el makefile como solucionar posibles problemas que se nos puedan plantear con el mismo.
