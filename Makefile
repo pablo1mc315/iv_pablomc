@@ -8,7 +8,7 @@
 ## Variables ##
 
 SRC = ./src
-lista_ficheros = $(SRC)/film.js $(SRC)/user.js
+lista_ficheros = $(shell ls $(SRC)/*.js)
 
 
 ## Tareas ##
