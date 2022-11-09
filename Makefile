@@ -8,6 +8,7 @@
 ## Variables ##
 
 SRC = ./src
+lista_ficheros = $(SRC)/film.js $(SRC)/user.js
 
 
 ## Tareas ##
@@ -18,6 +19,6 @@ all : check
 # Comprobación de la sintaxis de los ficheros fuente
 check :
 	@echo
-	@echo Comprobando sintaxis del código fuente...
+	@echo Comprobando sintaxis del codigo fuente...
 	@echo
-	node --check $(SRC)/film.js $(SRC)/user.js
+	$(foreach fichero, $(lista_ficheros), node --check $(fichero);)
