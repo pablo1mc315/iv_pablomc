@@ -20,10 +20,6 @@ Principalmente los usuarios que la utilicen, aunque es muy probable que también
 
 Principalmente porque, si guardásemos todas las películas en nuestro disco local, nos ocuparía muchísimo espacio, mientras que en la nube se guardan de manera remota y podemos acceder a ellas cuando queramos. Así mismo, nos permite que varios usuarios se conecten a la vez a nuestra aplicación para ver distintas películas.
 
-## Principal problema que podemos encontrar
-
-En mi opinión, pienso que el principal problema de esta idea es el conseguir una base de datos de películas que nos permitan desarrollar una app completa. Una solución a esto si no encontramos lo que buscamos, puede ser crear nuestro propio servidor y añadir ciertas películas que descarguemos, y acceder a él desde la aplicación.
-
 ## Comprobar sintaxis del código fuente
 
 El siguiente comando se encarga de comprobar la sintaxis del código fuente con Node.js
