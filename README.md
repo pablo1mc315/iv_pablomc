@@ -24,11 +24,20 @@ Principalmente porque, si guardásemos todas las películas en nuestro disco loc
 
 En mi opinión, pienso que el principal problema de esta idea es el conseguir una base de datos de películas que nos permitan desarrollar una app completa. Una solución a esto si no encontramos lo que buscamos, puede ser crear nuestro propio servidor y añadir ciertas películas que descarguemos, y acceder a él desde la aplicación.
 
+## Comprobar sintaxis del código fuente
+
+El siguiente comando se encarga de comprobar la sintaxis del código fuente con Node.js
+```shell
+make check
+```
+
 ## Documentación
 
 * [Usuarios](./docs/personas.md)
 * [Milestones](./docs/milestones.md)
 * [Historias de usuario](./docs/historias-usuario.md)
+* [Gestor de dependencias](./docs/gestor-dependencias.md)
+* [Gestor de tareas](./docs/gestor-tareas.md)
 
 ## Configuración del repositorio y claves objetivo 0
 

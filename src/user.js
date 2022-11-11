@@ -1,36 +1,29 @@
 /**
  * Implementación de clase User:
  * Clase necesaria para almacenar los atributos del usuario con los que implementaremos el objeto valor
- * 
+ *
  */
- 
-class User
-{
-    /**
+
+class User {
+  /**
      * Metodos
-     * @param {Array} genres 
+     * @param {Array} genres
      * Array de Peliculas, la estructura del array es de la forma:
-     * @param {Array[Film]} films 
-     * Donde: 
+     * @param {Array[Film]} films
+     * Donde:
      * films = [{name: 'Manolito Gafotas', date: 2014}, {name: 'Mafalda', date: 2017}];
      */
 
-    constructor(genres,films)
-    {
-        // Asignamos genres
-        this.genres = genres || [];
+  constructor (genres, films) {
+    // Asignamos genres
+    this.genres = genres || []
 
-        // Asignamos peliculas
-        if (films)
-        {
-            for (let index = 0; index < films.length; index++) 
-            {
-                var aux = {name: films[index].title, date: (new Date()).getFullYear()};
-                this.films.push(aux);
-            }
-        }
-        else
-            this.films = [];
-    }
- }
- 
+    // Asignamos peliculas
+    if (films) {
+      for (let index = 0; index < films.length; index++) {
+        const aux = { name: films[index].title, date: (new Date()).getFullYear() }
+        this.films.push(aux)
+      }
+    } else { this.films = [] }
+  }
+}
