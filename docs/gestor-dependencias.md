@@ -4,7 +4,7 @@
 
 Los gestores de dependencias son herramientas específicas para llevar a cabo la instalación de todas las necesarias de un proyecto en un lenguaje determinado. Para elegir uno para nuestra aplicación, se establecen los siguientes criterios:
 
-- Obligatoriamente , deberá permitir gestionar dependencias de JavaScript, así como seguir los estándares del lenguaje, principalmente, que utilice el fichero de dependencias package.json, lo cual va a permitir que cualquier persona pueda comprender y visualizar las dependencias que hemos instalado o que son necesarias para el proyecto (incluso información acerca del mismo) simplemente visualizando el fichero.
+- Obligatoriamente, deberá permitir gestionar dependencias de JavaScript, así como seguir los estándares del lenguaje, principalmente, que utilice el fichero de dependencias package.json, lo cual va a permitir que cualquier persona pueda comprender y visualizar las dependencias que hemos instalado o que son necesarias para el proyecto (incluso información acerca del mismo) simplemente visualizando el fichero.
 - La velocidad es importante, aunque no necesariamente debe funcionar muy bien para proyectos muy grandes, puesto que este no lo es.
 - Que esté actualizado y tenga un continuo mantenimiento, así como una comunidad bastante activa, para que nuestra aplicación no quede obsoleta en un futuro.
 - Que permita minimizar el riesgo de problemas de seguridad.
