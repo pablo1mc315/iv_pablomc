@@ -4,7 +4,6 @@
 
 Un gestor de tareas es una herramienta necesaria para, por ejemplo, la ejecución de test usando las herramientas de construcción, la comprobación de que la sintaxis del código fuente es correcta, etc. Esto nos permite automatizar cualquier tarea de nuestro proyecto en una única orden. Para elegir uno para nuestra aplicación, se establecen los siguientes criterios:
 
-- Obligatoriamente, deberá permitir gestionar tareas de JavaScript.
 - Atendiendo a las buenas prácticas, es necesario que realice la gestión de tareas a partir de un fichero de configuración exclusivo para ello.
 - La velocidad es importante.
 - Que esté actualizado y tenga un continuo mantenimiento, así como una comunidad bastante activa, para que nuestra aplicación no quede obsoleta en un futuro.
