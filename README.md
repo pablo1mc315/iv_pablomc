@@ -35,7 +35,7 @@ make check
 * [Gestor de dependencias](./docs/gestor-dependencias.md)
 * [Gestor de tareas](./docs/gestor-tareas.md)
 
-## Configuración del repositorio y claves objetivo 0
+## Configuración del repositorio
 
 * [Captura de pantalla del fichero de configuración de la carpeta .git del repositorio](./img/config.png)
 * [Captura de pantalla de la configuración de las claves pública y privada](./img/claves.png)
