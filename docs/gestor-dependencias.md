@@ -4,36 +4,40 @@
 
 Los gestores de dependencias son herramientas específicas para llevar a cabo la instalación de todas las necesarias de un proyecto en un lenguaje determinado. Para elegir uno para nuestra aplicación, se establecen los siguientes criterios:
 
-- Que sea un gestor de dependencias de JavaScript, a ser posible basado en NodeJS.
-- Que utilice el fichero de dependencias package.json (buenas prácticas).
-- No necesariamente debe funcionar muy bien para proyectos muy grandes, puesto que este no lo es.
-- Que esté actualizado y tenga un continuo mantenimiento, para que nuestra aplicación no quede obsoleta en un futuro.
-
-Estos criterios se cumplen en todos los gestores mencionados a continuación.
+- Obligatoriamente , deberá permitir gestionar dependencias de JavaScript, así como seguir los estándares del lenguaje, principalmente, que utilice el fichero de dependencias package.json, lo cual va a permitir que cualquier persona pueda comprender y visualizar las dependencias que hemos instalado o que son necesarias para el proyecto (incluso información acerca del mismo) simplemente visualizando el fichero.
+- La velocidad es importante, aunque no necesariamente debe funcionar muy bien para proyectos muy grandes, puesto que este no lo es.
+- Que esté actualizado y tenga un continuo mantenimiento, así como una comunidad bastante activa, para que nuestra aplicación no quede obsoleta en un futuro.
+- Que permita minimizar el riesgo de problemas de seguridad.
 
 ## Gestores de dependencias que cumplen los criterios:
 
 ### npm
 
-(Node Package Manager) Permite instalar, actualizar y publicar dependencias tanto públicas como privadas. Nos permite gestionar tanto dependencias como tareas, aunque en menor medida (como hemos visto en [#27](https://github.com/pablo1mc315/iv_pablomc/issues/27)).
+(Node Package Manager) Nos permite gestionar tanto dependencias como tareas, aunque en menor medida (como hemos visto en [#27](https://github.com/pablo1mc315/iv_pablomc/issues/27)).
 
-- A pesar de ser el más utilizado desde hace años, tiene dos principales problemas: es lento y el orden de instalación de las dependencias no es predecible, aunque estos no son realmente problemas importantes en proyectos pequeños, pero sí lo son cuando se manejan proyectos de gran tamaño entre muchas personas.
-- Es el más estandarizado y el más utilizado por la comunidad, por lo que está en continuo mantenimiento y desarrollo.
+- :heavy_check_mark: Su comunidad es enorme y muy activa, puesto que es el más utilizado desde hace años, y está en continuo mantenimiento.
+- :heavy_check_mark: No se le reconocen problemas de seguridad.
+- :x: En cuanto a velocidad, es lento, además de que el orden de instalación de las dependencias no es predecible. Este problema afecta principalmente a proyectos grandes, por lo que no nos afectaría demasiado.
 
 ### Yarn
 
-Las principales diferencias que tiene respecto a npm a tener en cuenta son:
+Sus principales características son:
 
-- Tiene un chequeador de licencias, que puede ser útil para saber exactamente qué permiten los paquetes que estamos usando, entre otras cosas, lo cual no es esencial pero le da un plus.
-- Es mucho más rápido a la hora de instalar los paquetes, lo cual es uno de los principales motivos por el cual se utiliza, pero para un proyecto no demasiado grande como este, no afecta demasiado.
-- Sin embargo, a pesar de tener una comunidad cada vez mayor, no es el mejor en cuanto a mantenimiento se refiere.
+- :heavy_check_mark: Es mucho más rápido a la hora de instalar los paquetes que npm, lo cual es uno de los principales motivos por el cual se utiliza, pero para un proyecto no demasiado grande como este no afecta demasiado, aunque es algo a tener en cuenta.
+- :heavy_check_mark: No se le reconocen problemas de seguridad.
+- :x: A pesar de tener una comunidad cada vez mayor, no es el mejor en cuanto a mantenimiento se refiere.
 
 ### pNpm
 
-A diferencia de npm y de Yarn, ahorra mucho espacio en disco y tiene instalaciones muy rápidas. No se le reconocen problemas graves de seguridad y es muy popular entre desarrolladores JavaScript, por lo que tiene una comunidad muy activa y un mantenimiento continuo.
+Es un gestor de dependencias de JavaScript orientado a ahorrar espacio en el disco, almacenando cada versión de una dependencia se almacena físicamente en `node_modules` solo una vez a partir de enlaces simbólicos, lo cual lo diferencia de los dos anteriores y es uno de los principales motivos de que esté empezando a ser sustituto de npm.
+
+- :heavy_check_mark: Es mucho más rápido a la hora de instalar los paquetes que npm y Yarn, por lo cual está empezando a ser muy utilizado por la comunidad.
+- :heavy_check_mark: No se le reconocen problemas de seguridad. Usa sumas de verificación para verificar la integridad de cada paquete instalado antes de que se ejecute su código, lo cual nos da un plus en este aspecto.
+- :heavy_check_mark: Tiene una comunidad muy activa y en continuo crecimiento.
+- :heavy_check_mark: Al ser más joven que los demás, está en constante mantenimimento y actualización.
 
 ## Gestor de dependencias elegido:
 
-Tenía la duda entre npm y Yarn, ya que el segundo es más moderno y soluciona problemas que se encontraron en el primero, pero, finalmente, me he decantado por npm ya que las diferencias que hay entre ambos se han reducido notablemente en la actualización a npm 5, principalmente en cuanto a la velocidad, que se veía muy mermada en otras versiones de npm con respecto a Yarn. 
+Tras investigar acerca del cumplimiento de estos requisitos e informarme acerca de su crecimiento, creo que pNpm es la mejor opción para el proyecto. Digo esto porque está comprobado que es el mejor en cuanto a tema de velocidad debido, principalmente, a la cantidad de espacio que ahorra en el disco a medida que aumenta el tamaño del proyecto.
 
-Además, pienso que las diferencias que hay entre ellos no afectan demasiado a la hora de un proyecto como el que nos atañe, como se puede ver según el tercer criterio, aunque quizás sí se verían reflejadas en proyectos mucho más grandes que necesiten gran cantidad de dependencias.
+Además tiene un plus en seguridad y su comunidad está creciendo cada vez más, así que pienso que puede ser una buena opción darle una oportunidad, principalmente porque no tiene desventajas notables respecto a los otros dos en comparación a las ventajas que ofrece.
