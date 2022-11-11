@@ -12,6 +12,6 @@ Diseño e implementación del sistema de recomendaciones de películas (esto es,
 
 Además, será necesario pasar unos test para comprobar que todo funciona correctamente y que no hay fallos en nuestro proyecto.
 
-* [[M4] Implementación de la interfaz de la aplicación.](https://github.com/pablo1mc315/iv_pablomc/milestone/5)
+* [[M2] Implementación de la interfaz de la aplicación.](https://github.com/pablo1mc315/iv_pablomc/milestone/5)
 
 Diseño e implementación de una interfaz minimalista, visual y cómoda para el usuario, en la que se muestren las películas recomendadas para este, en función al sistema de recomendaciones implementado en el M1.
