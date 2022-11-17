@@ -34,6 +34,7 @@ make check
 * [Historias de usuario](./docs/historias-usuario.md)
 * [Gestor de dependencias](./docs/gestor-dependencias.md)
 * [Gestor de tareas](./docs/gestor-tareas.md)
+* [Test-runner](./docs/test-runner.md)
 
 ## Configuración del repositorio
 
