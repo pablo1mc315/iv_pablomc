@@ -4,7 +4,7 @@
 
 Los test-runners son herramientas que se utilizan para seleccionar archivos de prueba y ejecutarlos para verificar errores y fallas de nuestra aplicación según unos estándares de referencia. Los criterios que deberá cumplir un test-runner para nuestro proyecto son:
 
-- La velocidad es importante, puesto que cuanto más rápido se ejecuten los test, mejor.
+- La velocidad es importante, puesto que cuanto más rápido se ejecuten los tests, mejor.
 - Que esté actualizado y tenga un continuo mantenimiento, así como una comunidad bastante activa, para que nuestra aplicación no quede obsoleta en un futuro.
 - Que tenga buena documentación se considera un plus, puesto que no estoy demasiado familiarizado con los test-runners.
 - En el caso de que no cuente con su propia librería de aserciones, deberemos abrir un issue para elegir una que sea compatible.

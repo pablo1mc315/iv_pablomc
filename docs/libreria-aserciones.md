@@ -2,11 +2,11 @@
 
 ## Criterios de búsqueda de una librería de aserciones:
 
-Las librerías o bibliotecas de aserciones son un conjunto de funciones que nos permiten hacer ciertas validaciones para comprobar que nuestro código funciona correctamente. Puesto que en #34 hemos elegido MochaJS como test-runner y este no trae una librería de aserciones propia, debemos elegir una. 
+Las librerías o bibliotecas de aserciones son un conjunto de funciones que nos permiten hacer ciertas validaciones para comprobar que nuestro código funciona correctamente. Puesto que en [#34](https://github.com/pablo1mc315/iv_pablomc/issues/34) hemos elegido MochaJS como test-runner y este no trae una librería de aserciones propia, debemos elegir una. 
 
 En cuanto a los criterios en los que me basaré para elegir una biblioteca de aserciones, voy a hacer uso de buenas prácticas y voy a comparar las que aparecen recomendadas en la [web oficial de MochaJS](https://mochajs.org/#assertions). Los criterios que deberá cumplir cada una para nuestro proyecto son:
 
-- La velocidad es importante, puesto que cuanto más rápido se ejecuten los test, mejor.
+- La velocidad es importante, puesto que cuanto más rápido se ejecuten los tests, mejor.
 - Que esté actualizado y tenga un continuo mantenimiento, así como una comunidad bastante activa, para que nuestra aplicación no quede obsoleta en un futuro.
 
 ## Librerías de aserciones que cumplen los criterios:
