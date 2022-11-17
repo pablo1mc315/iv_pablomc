@@ -35,6 +35,7 @@ make check
 * [Gestor de dependencias](./docs/gestor-dependencias.md)
 * [Gestor de tareas](./docs/gestor-tareas.md)
 * [Test-runner](./docs/test-runner.md)
+* [Librería de aserciones](./docs/libreria-aserciones.md)
 
 ## Configuración del repositorio
 
