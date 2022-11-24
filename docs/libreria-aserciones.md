@@ -6,39 +6,33 @@ Las librerías o bibliotecas de aserciones son un conjunto de funciones que nos 
 
 En cuanto a los criterios en los que me basaré para elegir una biblioteca de aserciones, voy a hacer uso de buenas prácticas y voy a comparar las que aparecen recomendadas en la [web oficial de MochaJS](https://mochajs.org/#assertions). Los criterios que deberá cumplir cada una para nuestro proyecto son:
 
-- La velocidad es importante, puesto que cuanto más rápido se ejecuten los tests, mejor.
-- Que esté actualizado y tenga un continuo mantenimiento, así como una comunidad bastante activa, para que nuestra aplicación no quede obsoleta en un futuro.
+- Que sea una librería de aserciones que utilice BDD para que nos sea más fácil su uso y entendimiento.
+- Que esté actualizada y tenga un continuo mantenimiento, así como una comunidad bastante activa, para que nuestra aplicación no quede obsoleta en un futuro.
 
 ## Librerías de aserciones que cumplen los criterios:
 
 ### should.js
 
-- :heavy_check_mark: No se le han detectado problemas graves de seguridad.
-- :x: Es bastante conocido y tiene una comunidad mediana, aunque cada vez se está usando cada vez menos.
-- :x: El mantenimiento es su principal punto débil y lo cual lo descarta como una posible opción, puesto que no se actualiza desde marzo 2019.
+- :heavy_check_mark: Es bastante conocido y tiene una comunidad mediana, aunque, por lo que he podido investigar, cada vez se está usando cada vez menos.
+- :x: El mantenimiento es su principal punto débil y lo cual lo descarta como una posible opción, puesto que no se actualiza desde marzo de 2019.
 
 ### expect.js
 
 Es una librería de aserciones minimalista basada en should.js.
 
-- :heavy_check_mark: Al igual que el anterior, no se le han detectado problemas graves de seguridad.
 - :heavy_check_mark: Tiene una comunidad bastante grande y está en continuo mantenimiento, por lo que eso no será un problema.
 
 ### Chai
 
-- :heavy_check_mark: No se le han detectado problemas graves de seguridad.
+Es una librería de aserciones que permite el tanto las prácticas BDD como TDD.
+
 - :heavy_check_mark: Tiene una comunidad muy grande y está en continuo mantenimiento, puesto que es el más utilizado, además de ser el que más puntuación tiene en comparadores como Snyk.
-- :heavy_check_mark: Como punto positivo, tiene mucha más documentación y tutoriales que cualquier otro, lo cual nos puede ayudar mucho a la hora de trabajar con él.
+- :heavy_check_mark: Como punto positivo, tiene mucha más documentación y tutoriales que cualquier otro, además de contar con su [propia web](https://www.chaijs.com/) en la que poder acceder a la documentación, plugings, etc., lo cual nos puede ayudar mucho a la hora de trabajar con él.
 
 ### unexpected
 
-- :heavy_check_mark: No se le reconocen problemas graves de seguridad.
 - :heavy_check_mark: Tiene un buen mantenimiento, pues se sigue actualizando a día de hoy.
-- :x: Sin embargo, no tiene una una comunidad demasiado grande comparada con las demás, por lo que es poco común encontrar documentación acerca de ella.
-
-### Otras opciones
-
-He descartado otras opciones que también aparecen recomendadas en la web oficial de MochaJS como 'better-assert', ya que, si bien no tiene problemas de seguridad, tiene una comunidad muy limitada y no se mantiene desde hace años. 
+- :x: Sin embargo, no tiene una una comunidad demasiado grande comparada con las demás, por lo que es poco común y algo complicado encontrar documentación acerca de ella.
 
 
 ## Librería de aserciones elegida:
