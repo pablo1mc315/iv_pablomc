@@ -1,5 +1,5 @@
-const assert = require('chai').assert;
-const user = require('../src/user');
+const assert = require('chai').assert
+const user = require('../src/user')
 
 // Comprobaciones para la clase User
 describe('Clase User', function(){
@@ -8,7 +8,7 @@ describe('Clase User', function(){
     describe('Cargar la biblioteca', function(){
 
         it('Se ha cargado correctamente', function(){
-            assert.ok(user, "Cargado");
+            assert.ok(user, "Cargado")
         });
     
     });
