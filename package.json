@@ -3,7 +3,8 @@
   "version": "0.4.1",
   "description": "Proyecto IV 22-23",
   "scripts": {
-    "check": "make check"
+    "check": "make check",
+    "test": "mocha ./tests"
   },
   "author": "Pablo Muñoz Castro",
   "license": "GNU General Public License v3.0",
