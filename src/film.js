@@ -2,7 +2,7 @@
  * Implementación de clase Film
  */
 
-class Film {
+export default class Film {
   /**
      * Metodos
      * @param {String} title
@@ -11,7 +11,7 @@ class Film {
      * @param {Array} actors
      */
 
-  constructor (title, year = (new Date()).getFullYear(), genres, actors)
+  constructor (title, year, genres, actors)
   {
     // Asignamos title
     if (title.trim().length !== 0)

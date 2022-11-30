@@ -2,7 +2,7 @@
  * Implementación de clase User
  */
 
-class User {
+export default class User {
   /**
      * Metodos
      * @param {Array} fav_genres
@@ -15,18 +15,9 @@ class User {
   constructor (fav_genres, films)
   {
     // Asignamos genres
-    this.fav_genres = fav_genres || []
+    this.fav_genres = fav_genres
 
     // Asignamos peliculas
-    if (films)
-    {
-      for (let index = 0; index < films.length; index++)
-      {
-        const aux = { name: films[index].title, date: (new Date()).getFullYear() }
-        this.films.push(aux)
-      }
-    }
-    else
-      this.films = []
+    this.films = films
   }
 }

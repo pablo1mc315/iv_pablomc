@@ -2,6 +2,7 @@
   "name": "iv_pablomc",
   "version": "0.4.1",
   "description": "Proyecto IV 22-23",
+  "type":"module",
   "scripts": {
     "check": "make check",
     "test": "mocha ./tests"
