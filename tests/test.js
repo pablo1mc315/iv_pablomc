@@ -63,23 +63,13 @@ describe('Clase User', function(){
             ]
 
             var new_user = new User(fav_genres, films)
-            new
-
-            // Función que comprueba que alguno de los géneros de la película concuerda con
-            // alguno de los géneros favoritos del usuario
-            function check_generos (pelicula) {
-                var contenido = false
-                pelicula.genres.forEach(genero => contenido = contenido || fav_genres.includes(genero))
-
-                return contenido
-            }
 
             // Actuar
             var contenido = false
-            new_user.films.forEach(pelicula => contenido = check_generos(pelicula))
+            new_user.films.forEach(film => contenido = film.checkGenres(new_user))
 
             // Afirmar            
-            expect(contenido).to.be.equal(true)       
+            expect(contenido).to.be.equal(true)      
         })
     })
 
