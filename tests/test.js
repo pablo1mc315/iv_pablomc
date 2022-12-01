@@ -41,4 +41,46 @@ describe('Clase User', function(){
         })
     })
 
+    // Testea que el algoritmo de recomendaciones es correcto
+    describe('Prueba de la lógica de negocio', function(){
+
+        it('El algoritmo ordena correctamente según los géneros favoritos del usuario', function(){
+            // Ajustar
+            var fav_genres = ['Terror', 'Comedy']
+            var films = [
+                new Film(
+                    "Annabelle",
+                    2014,
+                    ['Terror'],
+                    ['Annabelle Wallis', 'Ward Horton', 'Alfre Woodard']
+                ),
+                new Film(
+                    "Hola",
+                    2011,
+                    ['Comedy', 'Cartoon'],
+                    ['Yo', 'Tu']
+                )
+            ]
+
+            var new_user = new User(fav_genres, films)
+            new
+
+            // Función que comprueba que alguno de los géneros de la película concuerda con
+            // alguno de los géneros favoritos del usuario
+            function check_generos (pelicula) {
+                var contenido = false
+                pelicula.genres.forEach(genero => contenido = contenido || fav_genres.includes(genero))
+
+                return contenido
+            }
+
+            // Actuar
+            var contenido = false
+            new_user.films.forEach(pelicula => contenido = check_generos(pelicula))
+
+            // Afirmar            
+            expect(contenido).to.be.equal(true)       
+        })
+    })
+
 })
