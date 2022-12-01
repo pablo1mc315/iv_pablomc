@@ -27,6 +27,13 @@ El siguiente comando se encarga de comprobar la sintaxis del código fuente con 
 make check
 ```
 
+## Ejecutar los tests
+
+El siguiente comando se encarga de ejecutar los tests mediante Mocha
+```shell
+make test
+```
+
 ## Documentación
 
 * [Usuarios](./docs/personas.md)
