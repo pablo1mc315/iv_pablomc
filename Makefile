@@ -8,8 +8,9 @@
 ## Variables ##
 
 SRC = ./src
-TESTS = ./test
 lista_ficheros = $(shell ls $(SRC)/*.js)
+
+MOCHA = ./node_modules/mocha/bin/_mocha
 
 
 ## Tareas ##
@@ -27,6 +28,6 @@ check :
 # Ejecución de los test
 test :
 	@echo
-	@echo Comprobando sintaxis del codigo fuente...
+	@echo Ejecutando los tests...
 	@echo
-	mocha $(TEST)
+	$(MOCHA)
