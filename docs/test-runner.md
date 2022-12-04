@@ -28,13 +28,12 @@ Se utiliza para probar códigos JavaScript, especialmente aplicaciones desarroll
 - :heavy_check_mark: Tiene bastante documentación a la cual es fácil acceder.
 - :heavy_check_mark: Tiene su propia biblioteca de aserciones, por lo que no sería necesario instalar nada más.
 - :x: Muchos usuarios han declarado que la curva de aprendizaje es bastante difícil en comparación con otros test-runners.
-- :x: Muchos IDE no tienen soporte para Jest, lo cual no nos asegura que cualquier persona pueda trabajar fácilmente con él.
 
 ### Otras opciones
 
-No he valorado otras opciones como Jasmine o NigthwatchJS puesto que necesitan ficheros adicionales que aumentan la deuda técnica (hay que configurar el fichero test.js en el primero e instalar la biblioteca Selenium en el segundo), además de que tienen características muy parecidas a MochaJS y Jest.
+No he valorado otras opciones como Jasmine, puesto que necesita ficheros adicionales que aumentan la deuda técnica (hay que configurar el fichero test.js, además de que tiene características muy parecidas a MochaJS y Jest.
 
 
 ## Test-runner elegido:
 
-En este caso, no hay demasiadas diferencias entre ambos. He decidido elegir MochaJS puesto que no existe una diferencia notable en cuanto a velocidad (además de que estamos trabajando en un proyecto no muy grande, lo cual no se notará), su comunidad es mayor que la de Jest y permite soporte en casi todos los IDE. No cuenta con su propia biblioteca de aserciones, por lo que se creará un issue para elegir una.
+En este caso, no hay demasiadas diferencias entre ambos. He decidido elegir MochaJS puesto que no existe una diferencia notable en cuanto a velocidad (además de que estamos trabajando en un proyecto no muy grande, lo cual no se notará) y su comunidad es mayor que la de Jest. No cuenta con su propia biblioteca de aserciones, por lo que se creará un issue para elegir una.
