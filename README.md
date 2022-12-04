@@ -29,9 +29,9 @@ make check
 
 ## Ejecutar los tests
 
-El siguiente comando se encarga de ejecutar los tests mediante Mocha
+El siguiente comando se encarga de ejecutar los tests usando Mocha
 ```shell
-make test
+make tests
 ```
 
 ## Documentación

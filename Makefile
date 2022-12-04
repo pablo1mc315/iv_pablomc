@@ -16,7 +16,7 @@ MOCHA = ./node_modules/mocha/bin/_mocha
 ## Tareas ##
 
 # Por defecto
-all : check test
+all : check tests
 
 # Comprobación de la sintaxis de los ficheros fuente
 check :
@@ -26,7 +26,7 @@ check :
 	$(foreach fichero, $(lista_ficheros), node --check $(fichero);)
 
 # Ejecución de los test
-test :
+tests :
 	@echo
 	@echo Ejecutando los tests...
 	@echo
