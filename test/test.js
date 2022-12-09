@@ -1,34 +1,10 @@
-import { assert } from 'chai'              // Biblioteca assert de Chai
-import { expect } from 'chai'              // Biblioteca expert de Chai
+import { expect } from 'chai'              // Biblioteca expect de Chai
 import User from '../src/user.js'          // Clase User (entidad)
 import Film from '../src/film.js'          // Clase User (entidad)
 
 
-// Comprobaciones para la clase Film
-describe('Clase Film', function(){
-
-    // Testea que se haya cargado bien la biblioteca
-    describe('Cargar la biblioteca', function(){
-        
-        it('Se ha cargado correctamente la clase Film', function(){
-            assert.ok(Film, "Cargado")
-        })
-    
-    })
-})
-
-
 // Comprobaciones para la clase User
 describe('Clase User', function(){
-
-    // Testea que se haya cargado bien la biblioteca
-    describe('Cargar la biblioteca', function(){
-        
-        it('Se ha cargado correctamente la clase User', function(){
-            assert.ok(User, "Cargado")
-        })
-    
-    })
 
     // Testea que el algoritmo de recomendaciones es correcto
     describe('Prueba de la lógica de negocio', function(){
