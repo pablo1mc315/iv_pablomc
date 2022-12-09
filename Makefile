@@ -10,8 +10,6 @@
 SRC = ./src
 lista_ficheros = $(shell ls $(SRC)/*.js)
 
-MOCHA = ./node_modules/mocha/bin/_mocha
-
 
 ## Tareas ##
 
@@ -30,4 +28,4 @@ tests :
 	@echo
 	@echo Ejecutando los tests...
 	@echo
-	$(MOCHA)
+	npx mocha
