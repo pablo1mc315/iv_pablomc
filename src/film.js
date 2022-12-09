@@ -14,14 +14,7 @@ export default class Film {
   constructor (title, year, genres, actors)
   {
     // Asignamos title
-    if (title.trim().length !== 0)
-      this.title = title
-    else
-    {
-      // Aqui se lanza error porque el titulo es imprescindible para
-      // la pelicula (se puede usar el constructor unicamente con el titulo)
-      throw new Error('Invalid title')
-    }
+    this.title = title
 
     // Asignamos year
     this.year = year
