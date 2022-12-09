@@ -6,7 +6,6 @@ Los test-runners son herramientas que se utilizan para seleccionar archivos de p
 
 - Cuanto más rápido se ejecuten los tests, mejor, por lo cual se valorará un test-runner que ejecute test en paralelo.
 - Que esté actualizado y tenga un continuo mantenimiento, así como una comunidad bastante activa, para que nuestra aplicación no quede obsoleta en un futuro.
-- Que tenga buena documentación se considera un plus, puesto que no estoy demasiado familiarizado con los test-runners.
 - En el caso de que no cuente con su propia librería de aserciones, deberemos abrir un issue para elegir una que sea compatible.
 
 ## Test-runners que cumplen los criterios:
@@ -15,14 +14,14 @@ Los test-runners son herramientas que se utilizan para seleccionar archivos de p
 
 Es un test-runner de JavaScript destinado a probar aplicaciones que se ejecutan con Node.js.
 
-- :heavy_check_mark: Es bastante bueno en cuanto a velocidad se refiere y ejecuta los test en paralelo, aunque no es el mejor.
+- :heavy_check_mark: Permite ejecutar los test en paralelo.
 - :heavy_check_mark: Puesto que es muy antiguo, podemos encontrar muchos tutoriales y documentación.
 - :heavy_check_mark: Tiene una gran comunidad y su mantenimiento es constante.
 - :x: No cuenta con su propia biblioteca de aserciones.
 
 ### Jest
 
-Se utiliza para probar códigos JavaScript, especialmente aplicaciones desarrolladas con ReactJS (lo cual no estamos utilizando, aunque se puede usar también para Node.js sin problema).
+Se utiliza para probar códigos JavaScript, por lo que se puede usar con Node.js sin problema.
 
 - :heavy_check_mark: Su ejecución en paralelo es muy rápida y tiene un gran rendimiento, por lo que últimamente ha aumentado mucho su comunidad.
 - :heavy_check_mark: Tiene bastante documentación a la cual es fácil acceder.
