@@ -11,6 +11,14 @@ En cuanto a los criterios en los que me basaré para elegir una biblioteca de as
 
 ## Librerías de aserciones que cumplen los criterios:
 
+### assert
+
+Es la librería estándar que Node.js trae por defecto.
+
+- :heavy_check_mark: Al ser la librería estándar que trae Node.js, su uso está muy extendido, por lo que tiene una comunidad bastante activa.
+- :heavy_check_mark: Podemos encontrar bastante documentación en la web oficial de Node.
+- :x: La ultima versión que se lanzó de esta biblioteca fue hace 4 años, por lo que no es la mejor en cuanto a mantenimiento y actualización se refiere.
+
 ### should.js
 
 - :heavy_check_mark: Es bastante conocido y tiene una comunidad mediana, aunque, por lo que he podido investigar, cada vez se está usando cada vez menos.
@@ -33,7 +41,6 @@ Es una librería de aserciones que permite el tanto las prácticas BDD como TDD.
 
 - :heavy_check_mark: Tiene un buen mantenimiento, pues se sigue actualizando a día de hoy.
 - :x: Sin embargo, no tiene una una comunidad demasiado grande comparada con las demás, por lo que es poco común y algo complicado encontrar documentación acerca de ella.
-
 
 ## Librería de aserciones elegida:
 
