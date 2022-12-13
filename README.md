@@ -31,7 +31,7 @@ make check
 
 El siguiente comando se encarga de ejecutar los tests usando Mocha
 ```shell
-make tests
+make test
 ```
 
 ## Documentación

@@ -18,14 +18,10 @@ all : check tests
 
 # Comprobación de la sintaxis de los ficheros fuente
 check :
-	@echo
-	@echo Comprobando sintaxis del codigo fuente...
-	@echo
+	@echo "\n"Comprobando sintaxis del código fuente..."\n"
 	$(foreach fichero, $(lista_ficheros), node --check $(fichero);)
 
 # Ejecución de los test
-tests :
-	@echo
-	@echo Ejecutando los tests...
-	@echo
+test :
+	@echo "\n"Ejecutando los tests..."\n"
 	npx mocha
