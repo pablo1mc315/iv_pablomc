@@ -37,15 +37,4 @@ export default class Film {
       throw new Error('Actors are a must')
     }
   }
-
-
-  // Función que comprueba que alguno de los géneros de la película concuerda con
-  // alguno de los géneros favoritos del usuario
-  checkGenres (user)
-  {
-    var contenido = false
-    this.genres.forEach(genero => contenido = contenido || user.fav_genres.includes(genero))
-
-    return contenido
-  }
 }

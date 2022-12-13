@@ -18,17 +18,29 @@ export default class User {
     this.films = films
   }
 
-  // Función que modifica el parametro films según el género de las películas
-  recommendByGenre (all_films)
+  // Función que modifica el parametro fav_genres según las películas vistas por el usuario
+  // (voy a usar el algoritmo a priori de Argawal)
+  setFavGenres ()
   {
-    // Las películas introducidas no pueden ser un vector nulo
-    if (all_films != null)
-    {
-      // Las películas que cumplan los requisitos las añadimos al vector de películas recomendadas
-      all_films.forEach(film => {
-        if (film.checkGenres(this))
-          this.films.push(film)
+    // Umbral escogido (si la mitad de las películas vistas por el usuario contienen un género, se puede
+    // considerar como "favorito")
+    var umbral = parseInt(this.films.length/2)
+
+    // Calculamos la frecuencia con la que un género aparece en las películas vistas por el usuario
+    var repsPorGenero = new Map()
+
+    this.films.map(film => {
+      // Una película puede tener varios géneros
+      film.genres.map(genre => {
+        // Si el género ya ha aparecido en alguna película, sumamos 1 repetición y, si no, lo añadimos
+        if (repsPorGenero.has(genre))
+          repsPorGenero[genre] += 1
+        else
+          repsPorGenero.set(genre, 1)
       })
-    }
+    })
+
+    // Nos quedamos simplemente con los géneros que superan el umbral de repeticiones
+    this.fav_genres = repsPorGenero.keys().filter(i => { return repsPorGenero[i] >= umbral })
   }
 }
