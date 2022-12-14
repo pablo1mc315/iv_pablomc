@@ -21,18 +21,22 @@ Es un test-runner de JavaScript destinado a probar aplicaciones que se ejecutan 
 
 ### Jest
 
-Se utiliza para probar códigos JavaScript, por lo que se puede usar con Node.js sin problema.
-
 - :heavy_check_mark: Su ejecución en paralelo es muy rápida y tiene un gran rendimiento, por lo que últimamente ha aumentado mucho su comunidad.
 - :heavy_check_mark: Tiene bastante documentación a la cual es fácil acceder.
 - :heavy_check_mark: Tiene su propia biblioteca de aserciones, por lo que no sería necesario instalar nada más.
 - :x: Muchos usuarios han declarado que la curva de aprendizaje es bastante difícil en comparación con otros test-runners.
 
+### AVA
+
+- :heavy_check_mark: Permite ejecutar tests en paralelo, por lo que su rendimiento es bueno.
+- :heavy_check_mark: Tiene mayor puntuación en [Snyk](https://snyk.io/advisor/npm-package/ava) que los dos anteriores.
+- :heavy_check_mark: No está tan extendido pero, sin embargo, está en continuo mantenimiento actualmente y se usa en grandes proyectos.
+
 ### Otras opciones
 
-No he valorado otras opciones como Jasmine, puesto que necesita ficheros adicionales que aumentan la deuda técnica (hay que configurar el fichero test.js, además de que tiene características muy parecidas a MochaJS y Jest.
+No he valorado otras opciones como Jasmine, puesto que necesita ficheros adicionales que aumentan la deuda técnica (hay que configurar el fichero test.js), además de que tiene características muy parecidas a MochaJS y Jest.
 
 
 ## Test-runner elegido:
 
-En este caso, no hay demasiadas diferencias entre ambos. He decidido elegir MochaJS puesto que no existe una diferencia notable en cuanto a velocidad (además de que estamos trabajando en un proyecto no muy grande, lo cual no se notará) y su comunidad es mayor que la de Jest. No cuenta con su propia biblioteca de aserciones, por lo que se creará un issue para elegir una.
+En este caso, no hay demasiadas diferencias entre ambos. He decidido elegir MochaJS puesto que, según los sitios que he consultado, es más fácil y rápido de aprender, además de dar mayor flexibilidad a la hora de crear los tests y su comunidad está más extendida. No cuenta con su propia biblioteca de aserciones, por lo que se creará un issue para elegir una.
