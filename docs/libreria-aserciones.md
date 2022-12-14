@@ -11,13 +11,13 @@ En cuanto a los criterios en los que me basaré para elegir una biblioteca de as
 
 ## Librerías de aserciones que cumplen los criterios:
 
-### assert
+### node:test
 
-Es la librería estándar que Node.js trae por defecto.
+Es la librería estándar que Node.js trae por defecto que facilita la creación de tests JavaScript devolviendo resultados en fomato TAP.
 
-- :heavy_check_mark: Al ser la librería estándar que trae Node.js, su uso está muy extendido, por lo que tiene una comunidad bastante activa.
-- :heavy_check_mark: Podemos encontrar bastante documentación en la web oficial de Node.
-- :x: La ultima versión que se lanzó de esta biblioteca fue hace 4 años, por lo que no es la mejor en cuanto a mantenimiento y actualización se refiere.
+- :heavy_check_mark: Reduce la deuda técnica ya que no necesita instalaciones extra como, por ejemplo, chai.
+- :heavy_check_mark: En cuanto a mantenimiento, es una característica de Node introducida en la versión 18.12.1 y mejorada en la 19.2.0, por lo que está en continuo mantenimiento a pesar de ser bastante reciente.
+
 
 ### should.js
 
