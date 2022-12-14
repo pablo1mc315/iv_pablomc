@@ -35,13 +35,13 @@ Es una librería de aserciones minimalista basada en should.js.
 Es una librería de aserciones que permite el tanto las prácticas BDD como TDD.
 
 - :heavy_check_mark: Tiene una comunidad muy grande y está en continuo mantenimiento, puesto que es el más utilizado, además de ser el que más puntuación tiene en comparadores como Snyk.
-- :heavy_check_mark: Como punto positivo, tiene mucha más documentación y tutoriales que cualquier otro, además de contar con su [propia web](https://www.chaijs.com/) en la que poder acceder a la documentación, plugings, etc., lo cual nos puede ayudar mucho a la hora de trabajar con él.
+- :heavy_check_mark: Como punto positivo, cuenta con su [propia web](https://www.chaijs.com/) en la que podemos acceder a la documentación, plugins, etc., lo cual nos puede ayudar mucho a la hora de trabajar con él.
 
 ### unexpected
 
-- :heavy_check_mark: Tiene un buen mantenimiento, pues se sigue actualizando a día de hoy.
-- :x: Sin embargo, no tiene una una comunidad demasiado grande comparada con las demás, por lo que es poco común y algo complicado encontrar documentación acerca de ella.
+- :heavy_check_mark: Tiene un buen mantenimiento, pues se sigue actualizando a día de hoy. Además, su comunidad está en crecimiento, como podemos observar en [Snyk](https://snyk.io/advisor/npm-package/unexpected).
+- :heavy_check_mark: Al igual que Chai, cuenta con su [propia web](https://unexpected.js.org/) donde podemos encontrar documentación, ejemplos, plugins, etc.
 
 ## Librería de aserciones elegida:
 
-Me he decantado por elegir Chai, ya que es la que más se suele utilizar junto con MochaJS y la que más documentación aporta. Además, como hemos mencionado, es la que tiene una comunidad mayor y está completamente al día, por lo que nos asegura un buen rendimiento y que el proyecto no va a quedar obsoleto en cuanto a librería de aserciones se refiere.
+Me he decantado por elegir la biblioteca estándar de Node, ya que es bastante parecida a Chai en cuanto a sintaxis y genera menos deuda técnica al no tener que instalar dependencias extra. Además, al ser más reciente, está en continuo mantenimiento, además de ser estándar de Node, lo cual nos asegura que nuestro proyecto no quedará obsoleto en este aspecto.
