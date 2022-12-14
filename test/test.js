@@ -24,11 +24,10 @@ describe('Clase User', function() {
                 new Film ("Ocho apellidos vascos", 2014, ['Comedy', 'Romance'], ['Clara Lago', 'Dani Rovira', 'Carmen Machi']) 
             ]
 
-            var fav_genres = []
-            var new_user = new User(fav_genres, films)
+            var new_user = new User(null, films)
 
             // Actuar
-            new_user.setFavGenres()                 // Realizamos la recomendación por géneros
+            new_user.setFavGenres(new_user.calcFavGenres())
 
             // Afirmar
             assert.equal(new_user.fav_genres.length, 2)

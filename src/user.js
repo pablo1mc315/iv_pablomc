@@ -18,11 +18,19 @@ export default class User {
     this.films = films
   }
 
+  // Setter necesario para actualizar el valor de la lista de géneros favoritos
+  setFavGenres (fav_genres)
+  {
+    this.fav_genres = fav_genres
+  }
+
 
   // Función que modifica los géneros favoritos del usuario según las películas vistas por el mismo
   // (usando algoritmo 'a priori' de Agrawal)
-  setFavGenres ()
+  calcFavGenres ()
   {
+    var favs = []
+
     // Umbral escogido (si la mitad de las películas vistas por el usuario contienen un género, se puede
     // considerar como "favorito")
     var umbral = parseInt(this.films.length/2)
@@ -44,7 +52,22 @@ export default class User {
     // Nos quedamos simplemente con los géneros que superan el umbral de repeticiones
     reps_por_genero.forEach((rep, genero) => {
       if (rep >= umbral)
-        this.fav_genres.push(genero)
+        favs.push(genero)
     })
+
+    // Si no hay ningun género que cumpla el criterio anterior, nos quedamos con el que más se repita
+    if (favs.length == 0)
+    {
+      max = -1
+
+      reps_por_genero.forEach((rep, genero) => {
+        if (rep > max)
+          max = rep
+      })
+
+      favs = reps_por_genero.values().forEach( value => value == max )
+    }
+
+    return favs
   }
 }
