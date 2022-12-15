@@ -12,7 +12,8 @@ const films = [
     new Film ("Halloween con la familia Adams", null, ['Comedy', 'Terror'], null), 
     new Film ("Dracula", null, ['Drama', 'Terror'], null), 
     new Film ("Malnazidos", null, ['Terror', 'Comedy', 'Action'], null), 
-    new Film ("Ocho apellidos vascos", null, ['Comedy', 'Romance'], null) 
+    new Film ("Ocho apellidos vascos", null, ['Comedy', 'Romance'], null),
+    new Film ("Frozen", null, ['Cartoon'], null) 
 ]
 
 // Comprobaciones para la clase User
@@ -26,7 +27,7 @@ describe('Clase User', function() {
             var new_user = new User()
 
             // Actuar
-            new_user.addFilm(films[0])
+            new_user.addFilm(films[0])          // Terror
 
             // Afirmar
             assert.equal(new_user.films.length, 1)
@@ -35,6 +36,24 @@ describe('Clase User', function() {
             new_user.fav_genres.forEach(genre => 
                 assert.notEqual(new_user.films[0].genres.indexOf(genre), -1)
             )
+        })
+
+        it('Calcular géneros favoritos cuando ninguno aparece en la mitad o más de las películas', function(){
+            // Ajustar
+            var new_user = new User()
+    
+            // Actuar
+            new_user.addFilm(films[0])          // Terror
+            new_user.addFilm(films[2])          // Action, Drama
+            new_user.addFilm(films[4])          // Comedy, Terror
+            new_user.addFilm(films[7])          // Comedy, Romance
+            new_user.addFilm(films[8])          // Cartoon
+
+            // Afirmar
+            assert.equal(new_user.films.length, 5)
+            assert.equal(new_user.fav_genres.length, 2)                      // Terror, Comedy
+            assert.notEqual(new_user.fav_genres.indexOf("Terror"), -1)
+            assert.notEqual(new_user.fav_genres.indexOf("Comedy"), -1)
         })
     })
 
