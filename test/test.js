@@ -41,13 +41,10 @@ describe('Clase User', function() {
         it('Calcular géneros favoritos cuando ninguno aparece en la mitad o más de las películas', function(){
             // Ajustar
             let new_user = new User()
+            let index = [0,2,4,7,8]
     
             // Actuar
-            new_user.addFilm(films[0])          // Terror
-            new_user.addFilm(films[2])          // Action, Drama
-            new_user.addFilm(films[4])          // Comedy, Terror
-            new_user.addFilm(films[7])          // Comedy, Romance
-            new_user.addFilm(films[8])          // Cartoon
+            index.forEach(i => new_user.addFilm(films[i]))
 
             // Afirmar
             assert.equal(new_user.films.length, 5)
@@ -59,14 +56,10 @@ describe('Clase User', function() {
         it('Calcular géneros favoritos cuando alguno/s aparecen en la mitad o más de las películas', function(){
             // Ajustar
             let new_user = new User()
+            let index = [0,2,4,6,7,8]
     
             // Actuar
-            new_user.addFilm(films[0])          // Terror
-            new_user.addFilm(films[2])          // Action, Drama
-            new_user.addFilm(films[4])          // Comedy, Terror
-            new_user.addFilm(films[6])          // Terror, Comedy, Action
-            new_user.addFilm(films[7])          // Comedy, Romance
-            new_user.addFilm(films[8])          // Cartoon
+            index.forEach(i => new_user.addFilm(films[i]))
 
             // Afirmar
             assert.equal(new_user.films.length, 6)
