@@ -73,4 +73,17 @@ export default class User {
 
     return favs
   }
+
+  /**
+    * Función que añade una nueva película al conjunto de películas vistas del usuario
+    * @param {Film} new_film
+    */
+  addFilm (new_film)
+  {
+    // Añado la nueva película
+    this.films.push(new_film)
+
+    // Recalculo los géneros favoritos del usuario una vez añadida la nueva película
+    this.setFavGenres(this.calcFavGenres())
+  }
 }
