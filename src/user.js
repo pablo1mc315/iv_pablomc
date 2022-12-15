@@ -29,8 +29,7 @@ export default class User {
   /** Función que modifica los géneros favoritos del usuario según las películas vistas por el mismo
     * (usando algoritmo 'a priori' de Agrawal)
     * @return {Array[String]}
-    */
-  // 
+    */ 
   calcFavGenres ()
   {
     var favs = []
