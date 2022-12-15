@@ -20,17 +20,21 @@ describe('Clase User', function() {
 
     // Testea que el algoritmo de recomendaciones es correcto
     describe('Prueba de la lógica de negocio', function(){
-        it('El algoritmo asigna correctamente los géneros favoritos del usuario', function(){
+
+        it('Calcular géneros favoritos cuando el usuario ve su primera película', function(){
             // Ajustar
-            var new_user = new User(null, films)
+            var new_user = new User()
 
             // Actuar
-            new_user.setFavGenres(new_user.calcFavGenres())
+            new_user.addFilm(films[0])
 
             // Afirmar
-            assert.equal(new_user.fav_genres.length, 2)
-            assert.equal(new_user.fav_genres[0], "Terror")
-            assert.equal(new_user.fav_genres[1], "Comedy")
+            assert.equal(new_user.films.length, 1)
+            assert.equal(new_user.films[0].title, "Annabelle")
+            assert.equal(new_user.fav_genres.length, new_user.films[0].genres.length)
+            new_user.fav_genres.forEach(genre => 
+                assert.notEqual(new_user.films[0].genres.indexOf(genre), -1)
+            )
         })
     })
 

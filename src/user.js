@@ -8,7 +8,7 @@ export default class User {
     * @param {Array[String]} fav_genres
     * @param {Array[Film]} films
     */
-  constructor (fav_genres, films)
+  constructor (fav_genres = [], films = [])
   {
     // Asignamos genres
     this.fav_genres = fav_genres
