@@ -20,21 +20,9 @@ export default class Film {
     this.year = year
 
     // Asignamos genres
-    if (genres)
-      this.genres = genres
-    else
-    {
-      // Lanzamos error porque los generos de una pelicula son imprescindibles
-      throw new Error('Genres are a must')
-    }
+    this.genres = genres
 
     // Asignamos actors
-    if (actors)
-      this.actors = actors
-    else
-    {
-      // Lanzamos error porque los actores de una pelicula son imprescindibles
-      throw new Error('Actors are a must')
-    }
+    this.actors = actors
   }
 }
