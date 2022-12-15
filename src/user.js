@@ -23,14 +23,13 @@ export default class User {
     */ 
   calcFavGenres ()
   {
-    var favs = []
+    let favs = []
 
-    // Umbral escogido (si la mitad de las películas vistas por el usuario contienen un género, se puede
-    // considerar como "favorito")
-    var umbral = parseInt(this.films.length/2)
+    // Umbral escogido
+    let umbral = parseInt(this.films.length/2)
 
     // Calculamos la frecuencia con la que un género aparece en las películas vistas por el usuario
-    var reps_por_genero = new Map()
+    let reps_por_genero = new Map()
 
     this.films.map(film => {
       // Una película puede tener varios géneros

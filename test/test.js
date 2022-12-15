@@ -24,7 +24,7 @@ describe('Clase User', function() {
 
         it('Calcular géneros favoritos cuando el usuario ve su primera película', function(){
             // Ajustar
-            var new_user = new User()
+            let new_user = new User()
 
             // Actuar
             new_user.addFilm(films[0])          // Terror
@@ -40,7 +40,7 @@ describe('Clase User', function() {
 
         it('Calcular géneros favoritos cuando ninguno aparece en la mitad o más de las películas', function(){
             // Ajustar
-            var new_user = new User()
+            let new_user = new User()
     
             // Actuar
             new_user.addFilm(films[0])          // Terror
@@ -58,7 +58,7 @@ describe('Clase User', function() {
 
         it('Calcular géneros favoritos cuando alguno/s aparecen en la mitad o más de las películas', function(){
             // Ajustar
-            var new_user = new User()
+            let new_user = new User()
     
             // Actuar
             new_user.addFilm(films[0])          // Terror
