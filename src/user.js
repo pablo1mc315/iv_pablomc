@@ -17,15 +17,6 @@ export default class User {
     this.films = films
   }
 
-  /**
-    * Setter necesario para actualizar el valor de la lista de géneros favoritos
-    * @param {Array[String]} fav_genres
-    */
-  setFavGenres (fav_genres)
-  {
-    this.fav_genres = fav_genres
-  }
-
   /** Función que modifica los géneros favoritos del usuario según las películas vistas por el mismo
     * (usando algoritmo 'a priori' de Agrawal)
     * @return {Array[String]}
@@ -84,6 +75,6 @@ export default class User {
     this.films.push(new_film)
 
     // Recalculo los géneros favoritos del usuario una vez añadida la nueva película
-    this.setFavGenres(this.calcFavGenres())
+    this.fav_genres = this.calcFavGenres()
   }
 }
