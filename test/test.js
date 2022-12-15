@@ -55,6 +55,25 @@ describe('Clase User', function() {
             assert.notEqual(new_user.fav_genres.indexOf("Terror"), -1)
             assert.notEqual(new_user.fav_genres.indexOf("Comedy"), -1)
         })
+
+        it('Calcular géneros favoritos cuando alguno/s aparecen en la mitad o más de las películas', function(){
+            // Ajustar
+            var new_user = new User()
+    
+            // Actuar
+            new_user.addFilm(films[0])          // Terror
+            new_user.addFilm(films[2])          // Action, Drama
+            new_user.addFilm(films[4])          // Comedy, Terror
+            new_user.addFilm(films[6])          // Terror, Comedy, Action
+            new_user.addFilm(films[7])          // Comedy, Romance
+            new_user.addFilm(films[8])          // Cartoon
+
+            // Afirmar
+            assert.equal(new_user.films.length, 6)
+            assert.equal(new_user.fav_genres.length, 2)                      // Terror, Comedy
+            assert.notEqual(new_user.fav_genres.indexOf("Terror"), -1)
+            assert.notEqual(new_user.fav_genres.indexOf("Comedy"), -1)
+        })
     })
 
 })
