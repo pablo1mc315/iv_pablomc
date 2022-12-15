@@ -51,13 +51,16 @@ export default class User {
     // Si no hay ningun género que cumpla el criterio anterior, nos quedamos con el que más se repita
     if (favs.length == 0)
     {
-      max = -1
+      // Asignamos el máximo inicialmente al primer elemento
+      let max = reps_por_genero.values().at(0)
 
+      // Comprobamos y modificamos el máximo hasta obtener el mayor elemento
       reps_por_genero.forEach((rep, genero) => {
         if (rep > max)
           max = rep
       })
 
+      // Nos quedamos únicamente con el/los valores que se correspondan con el máximo
       favs = reps_por_genero.values().forEach( value => value == max )
     }
 
