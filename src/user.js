@@ -4,11 +4,10 @@
 
 export default class User {
   /**
-    * Metodos
-    * @param {Array} fav_genres
+    * Constructor
+    * @param {Array[String]} fav_genres
     * @param {Array[Film]} films
     */
-
   constructor (fav_genres, films)
   {
     // Asignamos genres
@@ -18,15 +17,20 @@ export default class User {
     this.films = films
   }
 
-  // Setter necesario para actualizar el valor de la lista de géneros favoritos
+  /**
+    * Setter necesario para actualizar el valor de la lista de géneros favoritos
+    * @param {Array[String]} fav_genres
+    */
   setFavGenres (fav_genres)
   {
     this.fav_genres = fav_genres
   }
 
-
-  // Función que modifica los géneros favoritos del usuario según las películas vistas por el mismo
-  // (usando algoritmo 'a priori' de Agrawal)
+  /** Función que modifica los géneros favoritos del usuario según las películas vistas por el mismo
+    * (usando algoritmo 'a priori' de Agrawal)
+    * @return {Array[String]}
+    */
+  // 
   calcFavGenres ()
   {
     var favs = []
