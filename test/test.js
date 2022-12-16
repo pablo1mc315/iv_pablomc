@@ -5,15 +5,15 @@ import User from '../src/user.js'               // Clase User (entidad)
 import Film from '../src/film.js'               // Clase Film
 
 const films = [
-    new Film ("Annabelle", null, ['Terror'], null),
-    new Film ("Inside Out", null, ['Comedy', 'Cartoon'], null),
-    new Film ("El último duelo", null, ['Action', 'Drama'], null),
-    new Film ("Los hijos del mal", null, ['Terror', 'Drama'], null),
-    new Film ("Halloween con la familia Adams", null, ['Comedy', 'Terror'], null), 
-    new Film ("Dracula", null, ['Drama', 'Terror'], null), 
-    new Film ("Malnazidos", null, ['Terror', 'Comedy', 'Action'], null), 
-    new Film ("Ocho apellidos vascos", null, ['Comedy', 'Romance'], null),
-    new Film ("Frozen", null, ['Cartoon'], null) 
+    new Film ("Annabelle", null, ['Terror']),
+    new Film ("Inside Out", null, ['Comedy', 'Cartoon']),
+    new Film ("El último duelo", null, ['Action', 'Drama']),
+    new Film ("Los hijos del mal", null, ['Terror', 'Drama']),
+    new Film ("Halloween con la familia Adams", null, ['Comedy', 'Terror']), 
+    new Film ("Dracula", null, ['Drama', 'Terror']), 
+    new Film ("Malnazidos", null, ['Terror', 'Comedy', 'Action']), 
+    new Film ("Ocho apellidos vascos", null, ['Comedy', 'Romance']),
+    new Film ("Frozen", null, ['Cartoon']) 
 ]
 
 // Comprobaciones para la clase User
