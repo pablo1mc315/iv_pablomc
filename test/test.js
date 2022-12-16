@@ -16,7 +16,7 @@ const list_films = [
     ["Frozen", 2013, ['Cartoon']] 
 ]
 
-let films = new Array[Film]
+let films = []
 list_films.forEach(f => films.push(new Film (f[0], f[1], f[2])))
 
 // Comprobaciones para la clase User
