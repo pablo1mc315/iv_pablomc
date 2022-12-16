@@ -1,18 +1,17 @@
 {
   "name": "iv_pablomc",
-  "version": "0.3.3",
+  "version": "0.4.1",
   "description": "Proyecto IV 22-23",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "check": "make check"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pablo1mc315/iv_pablomc.git"
+    "check": "node --check ./src/*.js",
+    "test": "npx mocha",
+    "all": "npm run check && npm run test"
   },
   "author": "Pablo Muñoz Castro",
   "license": "GNU General Public License v3.0",
-  "dependencies": {
-    "pnpm": "^7.15.0"
+  "devDependencies": {
+    "mocha": "^10.1.0",
+    "pnpm": "^7.18.2"
   }
 }

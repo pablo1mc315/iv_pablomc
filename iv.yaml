@@ -3,6 +3,8 @@ lenguaje: node.js
 entidad: user.js
 
 automatizar:
-  fichero: Makefile
-  orden: make
+  fichero: package.json
+  orden: pnpm run all
+
+test: tests/test.js
 
