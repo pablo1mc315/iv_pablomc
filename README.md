@@ -24,14 +24,14 @@ Principalmente porque, si guardásemos todas las películas en nuestro disco loc
 
 El siguiente comando se encarga de comprobar la sintaxis del código fuente con Node.js
 ```shell
-make check
+pnpm run check
 ```
 
 ## Ejecutar los tests
 
 El siguiente comando se encarga de ejecutar los tests usando Mocha
 ```shell
-make test
+pnpm run test
 ```
 
 ## Documentación

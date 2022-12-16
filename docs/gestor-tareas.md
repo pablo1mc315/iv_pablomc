@@ -12,11 +12,11 @@ Un gestor de tareas es una herramienta necesaria para, por ejemplo, la ejecució
 
 ## Gestores de tareas a investigar a partir los cuales elegir:
 
-### npm
+### npm/pnpm
 
-Viene incorporado en NodeJS y, como ya se ha explicado en [#26](https://github.com/pablo1mc315/iv_pablomc/issues/26), funciona tanto como gestor de tareas como gestor de dependencias.
+Vienen incorporado en NodeJS y, como ya se ha explicado en [#26](https://github.com/pablo1mc315/iv_pablomc/issues/26), funcionan tanto como gestores de tareas como gestores de dependencias.
 
-- :heavy_check_mark: Hay dos tipos de tareas con npm, tareas integradas (las que son comunes a la mayoría de los proyectos, como `test` o `install`, que vienen predefinidas por el propio gestor) y tareas propias (aquellas que nos permite crear npm mediante scripts propios).
+- :heavy_check_mark: Hay dos tipos de tareas, tareas integradas (las que son comunes a la mayoría de los proyectos, como `test` o `install`, que vienen predefinidas por el propio gestor) y tareas propias (aquellas que nos permite crear npm mediante scripts propios).
 - :x: No es muy común utilizarlo de esta forma, ya que hay herramientas que son gestores de tareas específicos y mucho más completos y con mas funcionalidades por lo que, a pesar de tener buen mantenimiento, su uso no está demasiado extendido.
 - :x: No usa un fichero excluso para la gestión de tareas.
 
@@ -47,3 +47,5 @@ Es la más antigua, aunque sigue siendo una de las herramientas más populares s
 ## Gestor de tareas elegido
 
 Me he decantado por make ya que permite muchas otras opciones además de ejecutar tareas de forma muy eficiente, como implementar funciones para, por ejemplo, comprobar si la versión de Node que estamos utilizando es la deseada para nuestra aplicación y avisarnos antes de que nos de algún otro error debido a ello. Como hemos dicho, tiene una enorme comunidad, además de no estar para nada desactualizada, lo cual hace que se siga utilizando actualmente, por lo que podemos garantizar que el proyecto no quedará desactualizado en este aspecto y podemos encontrar gran cantidad de documentación que nos permitirá tanto implementar tareas en el makefile como solucionar posibles problemas que se nos puedan plantear con el mismo.
+
+> Finalmente he descartado make puesto que, tras varios avances en el proyecto, me he dado cuenta de que no aporta nada, simplemente deuda técnica al tener un fichero más, por lo que directamente utilizaré pnpm como gestor de tareas.
