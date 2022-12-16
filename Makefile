@@ -14,7 +14,7 @@ lista_ficheros = $(shell ls $(SRC)/*.js)
 ## Tareas ##
 
 # Por defecto
-all : check tests
+all : check test
 
 # Comprobación de la sintaxis de los ficheros fuente
 check :
