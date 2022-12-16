@@ -4,17 +4,20 @@ import { describe, it } from 'node:test'
 import User from '../src/user.js'               // Clase User (entidad)
 import Film from '../src/film.js'               // Clase Film
 
-const films = [
-    new Film ("Annabelle", 2014, ['Terror']),
-    new Film ("Inside Out", 2015, ['Comedy', 'Cartoon']),
-    new Film ("El último duelo", 2021, ['Action', 'Drama']),
-    new Film ("Los hijos del mal", 1992, ['Terror', 'Drama']),
-    new Film ("Halloween con la familia Adams", 1977, ['Comedy', 'Terror']), 
-    new Film ("Dracula", 1992, ['Drama', 'Terror']), 
-    new Film ("Malnazidos", 2020, ['Terror', 'Comedy', 'Action']), 
-    new Film ("Ocho apellidos vascos", 2014, ['Comedy', 'Romance']),
-    new Film ("Frozen", 2013, ['Cartoon']) 
+const list_films = [
+    ["Annabelle", 2014, ['Terror']],
+    ["Inside Out", 2015, ['Comedy', 'Cartoon']],
+    ["El último duelo", 2021, ['Action', 'Drama']],
+    ["Los hijos del mal", 1992, ['Terror', 'Drama']],
+    ["Halloween con la familia Adams", 1977, ['Comedy', 'Terror']], 
+    ["Dracula", 1992, ['Drama', 'Terror']], 
+    ["Malnazidos", 2020, ['Terror', 'Comedy', 'Action']], 
+    ["Ocho apellidos vascos", 2014, ['Comedy', 'Romance']],
+    ["Frozen", 2013, ['Cartoon']] 
 ]
+
+let films = new Array[Film]
+list_films.forEach(f => films.push(new Film (f[0], f[1], f[2])))
 
 // Comprobaciones para la clase User
 describe('Clase User', function() {
