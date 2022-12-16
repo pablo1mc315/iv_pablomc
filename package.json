@@ -4,8 +4,9 @@
   "description": "Proyecto IV 22-23",
   "type": "module",
   "scripts": {
-    "check": "make check",
-    "test": "make test"
+    "check": "node --check ./src/*.js",
+    "test": "npx mocha",
+    "all": "npm run check && npm run test"
   },
   "author": "Pablo Muñoz Castro",
   "license": "GNU General Public License v3.0",
