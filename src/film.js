@@ -8,10 +8,9 @@ export default class Film {
     * @param {String} title
     * @param {Number} year
     * @param {Array} genres
-    * @param {Array} actors
     */
 
-  constructor (title, year, genres, actors)
+  constructor (title, year, genres)
   {
     // Asignamos title
     this.title = title
@@ -21,8 +20,5 @@ export default class Film {
 
     // Asignamos genres
     this.genres = genres
-
-    // Asignamos actors
-    this.actors = actors
   }
 }
