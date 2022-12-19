@@ -2,9 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   mocha: ^10.1.0
+  pnpm: ^7.18.2
 
 devDependencies:
   mocha: 10.1.0
+  pnpm: 7.18.2
 
 packages:
 
@@ -388,6 +390,12 @@ packages:
   /picomatch/2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+    dev: true
+
+  /pnpm/7.18.2:
+    resolution: {integrity: sha512-k3LCdsrTPqL4dVgCgjpdWHcwzhEA/YCu2ZFR/+EiFy91azuRQcWgQbYf5rPkYu5x1Dl8+2KtXKTlDcrSx5hnQw==}
+    engines: {node: '>=14.6'}
+    hasBin: true
     dev: true
 
   /randombytes/2.1.0:
