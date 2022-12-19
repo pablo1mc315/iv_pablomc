@@ -1,10 +1,10 @@
 lenguaje: node.js
 
-entidad: user.js
+entidad: ./src/user.js
 
 automatizar:
   fichero: package.json
   orden: pnpm run all
 
-test: tests/test.js
+test: ./tests/test.js
 
