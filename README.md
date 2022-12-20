@@ -43,6 +43,7 @@ pnpm run test
 * [Gestor de tareas](./docs/gestor-tareas.md)
 * [Test-runner](./docs/test-runner.md)
 * [Librería de aserciones](./docs/libreria-aserciones.md)
+* [Imagen base](./docs/imagen-base.md)
 
 ## Configuración del repositorio
 
