@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "check": "node --check ./src/user.js && node --check ./src/film.js",
-    "test": "npx mocha",
-    "all": "npm run check && npm run test"
+    "test": "npx mocha"
   },
   "author": "Pablo Muñoz Castro",
   "license": "GNU General Public License v3.0",
