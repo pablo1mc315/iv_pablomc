@@ -12,7 +12,7 @@ COPY . .
 # Cambiamos al usuario de node e instalamos todas las dependencias necesarias
 USER node
 
-RUN npm install -g pnpm
+RUN npm install pnpm
 RUN pnpm install
 
 # Ejecutamos los tests
