@@ -9,10 +9,15 @@ WORKDIR /home/app
 COPY package.json ./
 COPY . .
 
+# Inicializamos variables de entorno necesarias para pnpm
+ENV NPM_CONFIG_PREFIX="/home/node/.npm-global"
+ENV PNPM_HOME="/.pnpm"
+ENV PATH="${PATH}:${PNPM_HOME}:/home/node/.npm-global/bin"
+
 # Cambiamos al usuario de node e instalamos todas las dependencias necesarias
 USER node
 
-RUN npm install pnpm
+RUN npm install -g pnpm
 RUN pnpm install
 
 # Ejecutamos los tests
