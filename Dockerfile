@@ -5,9 +5,8 @@ FROM node:lts-alpine
 RUN mkdir -p /home/app && chown -R node:node /home/app
 WORKDIR /home/app
 
-# Copiamos el package.json y el resto de fichero al directorio principal
+# Copiamos el package.json al directorio principal para poder instalar las dependencias
 COPY package.json ./
-COPY . .
 
 # Inicializamos variables de entorno necesarias para pnpm
 ENV NPM_CONFIG_PREFIX="/home/app/.npm-global"
