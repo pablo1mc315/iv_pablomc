@@ -5,6 +5,7 @@ FROM alpine:latest
 RUN adduser --disabled-password user_test \
     && mkdir -p /home/user_test/app \
     && chown -R user_test /home/user_test/app \
+    && apk update \
     && apk add npm 
 
 WORKDIR /home/user_test/app
@@ -19,8 +20,9 @@ ENV PATH=$PATH:/home/user_test/.npm-global/bin
 # Cambiamos al usuario creado e instalamos todas las dependencias necesarias
 USER user_test
 
-RUN npm install -g pnpm
-RUN pnpm install
+RUN npm install -g pnpm \
+    && pnpm install \
+    && rm package.json
 
 # Ejecutamos los tests
 ENTRYPOINT [ "pnpm", "run", "test" ]
