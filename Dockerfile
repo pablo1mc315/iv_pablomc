@@ -1,20 +1,19 @@
 # Usamos la imagen base elegida
-FROM node:lts-alpine
+FROM alpine:latest
 
-# Creamos el directorio de trabajo y le damos permiso al usuario de node
-RUN mkdir -p /home/app && chown -R node:node /home/app
-WORKDIR /home/app
+# Lo primero es crear un usuario sin privilegios de root y asignarle un directorio de trabajo
+RUN adduser --disabled-password user_test \
+    && mkdir -p /home/user_test/app \
+    && chown -R user_test /home/user_test/app \
+    && apk add npm 
+
+WORKDIR /home/user_test/app
 
 # Copiamos el package.json al directorio principal para poder instalar las dependencias
 COPY package.json ./
 
-# Inicializamos variables de entorno necesarias para pnpm
-ENV NPM_CONFIG_PREFIX="/home/app/.npm-global"
-ENV PNPM_HOME="/.pnpm"
-ENV PATH="${PATH}:${PNPM_HOME}:/home/app/.npm-global/bin"
-
-# Cambiamos al usuario de node e instalamos todas las dependencias necesarias
-USER node
+# Cambiamos al usuario creado e instalamos todas las dependencias necesarias
+USER user_test
 
 RUN npm install -g pnpm
 RUN pnpm install
