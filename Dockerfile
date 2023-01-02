@@ -12,6 +12,10 @@ WORKDIR /home/user_test/app
 # Copiamos el package.json al directorio principal para poder instalar las dependencias
 COPY package.json ./
 
+# Cambiamos manualmente el directorio predeterminado de npm para poder instalar pnpm
+ENV NPM_CONFIG_PREFIX=/home/user_test/.npm-global
+ENV PATH=$PATH:/home/user_test/.npm-global/bin
+
 # Cambiamos al usuario creado e instalamos todas las dependencias necesarias
 USER user_test
 
