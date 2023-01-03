@@ -1,7 +1,6 @@
 # Usamos la imagen base elegida
 FROM alpine:latest
 
-# Lo primero es crear un usuario sin privilegios de root y asignarle un directorio de trabajo
 RUN adduser --disabled-password user_test \
     && mkdir -p /home/user_test/app \
     && chown -R user_test /home/user_test/app \
@@ -21,6 +20,7 @@ ENV PATH=$PATH:/home/user_test/.npm-global/bin
 USER user_test
 
 RUN npm install -g pnpm \
+    && del npm \
     && pnpm install \
     && rm package.json
 
