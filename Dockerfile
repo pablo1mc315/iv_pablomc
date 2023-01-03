@@ -16,13 +16,13 @@ COPY package.json ./
 ENV NPM_CONFIG_PREFIX=/home/user_test/.npm-global
 ENV PATH=$PATH:/home/user_test/.npm-global/bin
 
-# Cambiamos al usuario creado e instalamos todas las dependencias necesarias
-USER user_test
-
 RUN npm install -g pnpm \
-    && del npm \
     && pnpm install \
+    && apk del npm \
     && rm package.json
+
+# Cambiamos al usuario creado
+USER user_test
 
 # Ejecutamos los tests
 ENTRYPOINT [ "pnpm", "run", "test" ]
