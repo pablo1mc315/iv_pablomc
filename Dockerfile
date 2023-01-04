@@ -4,7 +4,6 @@ FROM alpine:latest
 RUN adduser --disabled-password user_test \
     && mkdir -p /home/user_test/app \
     && chown -R user_test /home/user_test/app \
-    && apk update \
     && apk add npm 
 
 WORKDIR /home/user_test/app
