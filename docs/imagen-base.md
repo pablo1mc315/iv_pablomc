@@ -14,16 +14,23 @@ Siguiendo las buenas prácticas, usaremos una imagen base de Docker oficial o de
 
 ### node:alpine
 
-Es la versión de la imagen base de Node basada en el proyecto Alpine Linux.
+Es la versión de la imagen base oficial de Node basada en el proyecto Alpine Linux.
 
 - :heavy_check_mark: Es completamente compatible para nuestro proyecto, ya que es la imagen base oficial de Node, además de contar con un usuario sin privilegios root `node` ya añadido.
 - :heavy_check_mark: Está en continuo mantenimiento ya que el último push en dockerhub fue hace apenas una semana.
 - :x: Tiene un montón de funcionalidades ya instaladas como `g++`,  `make` o `yarn`, que no nos son relevantes a la hora de ejecutar nuestros tests, lo hace que el tamaño de la imagen aumente.
 
-## imagenes base de sistemas operativos limpios
+## imagenes base oficiales de sistemas operativos limpios
 
 Otra opción que podemos tomar, es la de instalar sistemas operativos limpios y, sobre ellos, montar nuestro contenedor para ejecutar test. La ventaja de esto es que nos aseguramos de tener únicamente en el contenedor aquellas instalaciones que nos sirvan para nuestro propósito, reduciendo la deuda ténica. Tenemos las opciones de instalar las imágenes oficiales de [alpine](https://hub.docker.com/_/alpine), [ubuntu](https://hub.docker.com/_/ubuntu), [fedora](https://hub.docker.com/_/fedora) o [debian](https://hub.docker.com/_/debian).
 
+## imagenes base de creadores verificados
+
+Como se dijo en clase, también se deben considerar las imágenes base que, aunque no sean oficiales, son de creadores verificados y que igual nos pueden ser útiles. Por ejemplo, tenemos una imagen creada por la empresa Bitnami en su versión para Node ([aquí](https://github.com/bitnami/containers/blob/main/bitnami/node/18/debian-11/Dockerfile) su Dockerfile), pero la descartamos pues ocupa más de 1 GB de memoria.
+
+También podemos encontrar otras imágenes creadas por otras empresas como [wallarm/node](https://github.com/wallarm/docker-wallarm-node/blob/stable/4.4/Dockerfile) que ocupa unos 350 MB, [okteto/node]() que tiene instalación no necesarias como `yarn` que la hacen llegar a ocupar casi 1 GB también (también influye que está basada en la imagen base oficial de Node) o [vmware/node](https://github.com/vmware-archive/node/blob/master/Dockerfile) con unos 160 MB, que también podría ser una buena opción.
+
+
 ## Imagen base elegida:
 
-He decidido descartar la imagen de Node debido a la gran cantidad de instalaciones innecesarias que trae por defecto, lo que hace que aumente en gran medida su tamaño. Si comparamos las de sistemas operativos limpios, podemos comprobar que las de ubuntu, fedora y debian tienen un tamaño parecido (77.8 MB, 184 MB y 124.07 MB, respectivamente), mientras que la de Alpine Linux tiene un tamaño muy pequeño (únicamente 7.05 MB) ya que su principal objetivo es ser poco pesada. Por tanto, tendremos que instalar sobre ella todo lo necesario para la ejecución de nuestros tests.
+He decidido descartar la imagen de Node debido a la gran cantidad de instalaciones innecesarias que trae por defecto, lo que hace que aumente en gran medida su tamaño. Si comparamos las de sistemas operativos limpios, podemos comprobar que las de ubuntu, fedora y debian tienen un tamaño parecido (77.8 MB, 184 MB y 124.07 MB, respectivamente), mientras que la de Alpine Linux tiene un tamaño muy pequeño (únicamente 7.05 MB) ya que su principal objetivo es ser poco pesada, lo cual consigue con diferencia respecto a las demás. Por tanto, tendremos que instalar sobre ella todo lo necesario para la ejecución de nuestros tests.
