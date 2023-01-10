@@ -8,7 +8,7 @@ RUN adduser --disabled-password user_test \
 WORKDIR /home/user_test/app
 
 # Copiamos el package.json al directorio principal para poder instalar las dependencias
-COPY package.json ./
+COPY package.json ./ && pnpm-lock.yaml ./
 
 RUN wget -qO /bin/pnpm "https://github.com/pnpm/pnpm/releases/latest/download/pnpm-linuxstatic-x64" \
     && chmod +x /bin/pnpm \
