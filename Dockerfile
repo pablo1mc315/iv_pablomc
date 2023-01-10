@@ -12,12 +12,13 @@ COPY package.json ./
 
 RUN wget -qO /bin/pnpm "https://github.com/pnpm/pnpm/releases/latest/download/pnpm-linuxstatic-x64" \
     && chmod +x /bin/pnpm \
-    && apk add nodejs \
-    && pnpm install \
-    && rm package.json
+    && apk add nodejs
 
 # Cambiamos al usuario creado
 USER user_test
+
+RUN pnpm install \
+    && rm package.json
 
 # Ejecutamos los tests
 ENTRYPOINT [ "pnpm", "run", "test" ]
