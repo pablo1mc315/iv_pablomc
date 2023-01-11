@@ -12,13 +12,13 @@ Siguiendo las buenas prácticas, usaremos una imagen base de Docker oficial o de
 
 ## Imágenes base posibles:
 
-### node:alpine
+### node:lts-bullseye-slim
 
-Es la versión de la imagen base oficial de Node basada en el proyecto Alpine Linux.
+Es la versión de la imagen base oficial de Node con soporte a largo plazo (LTS) que utiliza la variante de la imagen `bullseye` además de la variante `slim` que la hace menos pesada que la original.
 
 - :heavy_check_mark: Es completamente compatible para nuestro proyecto, ya que es la imagen base oficial de Node, además de contar con un usuario sin privilegios root `node` ya añadido.
-- :heavy_check_mark: Está en continuo mantenimiento ya que el último push en dockerhub fue hace apenas una semana.
-- :x: Tiene un montón de funcionalidades ya instaladas como `g++`,  `make` o `yarn`, que no nos son relevantes a la hora de ejecutar nuestros tests, lo hace que el tamaño de la imagen aumente.
+- :heavy_check_mark: Está en continuo mantenimiento y no va a quedar desactualizada puesto que cuenta con soporte a largo plazo.
+- :x: Tiene algunas funcionalidades ya instaladas como `yarn`, que no nos son relevantes a la hora de ejecutar nuestros tests, lo hace que el tamaño de la imagen aumente. Aún así, su tamaño es de 244 MB, lo que no es demasiado y es una opción a considerar.
 
 ## imagenes base oficiales de sistemas operativos limpios
 
