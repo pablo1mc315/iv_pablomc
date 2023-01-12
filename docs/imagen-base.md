@@ -33,4 +33,6 @@ También podemos encontrar otras imágenes creadas por otras empresas como [wall
 
 ## Imagen base elegida:
 
-He decidido descartar la imagen de Node debido a la gran cantidad de instalaciones innecesarias que trae por defecto, lo que hace que aumente en gran medida su tamaño. Si comparamos las de sistemas operativos limpios, podemos comprobar que las de ubuntu, fedora y debian tienen un tamaño parecido (77.8 MB, 184 MB y 124.07 MB, respectivamente), mientras que la de Alpine Linux tiene un tamaño muy pequeño (únicamente 7.05 MB) ya que su principal objetivo es ser poco pesada, lo cual consigue con diferencia respecto a las demás. Por tanto, tendremos que instalar sobre ella todo lo necesario para la ejecución de nuestros tests.
+Tras descartar algunas de las imágenes base mencionadas debido a su alto peso, nos quedan varias opciones: optar por la imagen base de `node:lts-bullseye-slim`, que no ocupa demasiado y tiene instalado todo lo necesario para ejecutar Node en el contenedor; la imagen base de `vmware/node`, que es un poco menos pesada que la anterior pero su mantenimiento es menor, pues lleva meses sin actualizarse; y la imagen base del sistema operativo de Alpine Linux.
+
+Comprobado que tras instalar todo lo necesario para trabajar con la imagen de Alpine Linux, se nos va de los 7 MB iniciales a los casi 200 MB, voy a optar por la imagen de `node:lts-bullseye-slim` que, además de ya incluir todo lo necesario para trabajar con node, tiene un mantenimiento continuo y un peso parecido.
