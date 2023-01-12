@@ -1,23 +1,23 @@
 # Usamos la imagen base elegida
-FROM alpine:latest
+FROM node:lts-bullseye-slim
 
-RUN adduser --disabled-password user_test \
-    && mkdir -p /home/user_test/app \
-    && chown -R user_test /home/user_test/app
+RUN mkdir -p /home/app \
+    && chown -R node /home/app
 
-WORKDIR /home/user_test/app
+WORKDIR /home/app
 
 # Copiamos el package.json al directorio principal para poder instalar las dependencias
 COPY package.json pnpm-lock.yaml ./
 
-RUN wget -qO /bin/pnpm "https://github.com/pnpm/pnpm/releases/latest/download/pnpm-linuxstatic-x64" \
-    && chmod +x /bin/pnpm \
-    && apk add nodejs
+# Cambiamos manualmente el directorio predeterminado de npm para poder instalar pnpm
+ENV NPM_CONFIG_PREFIX=/home/app/.npm-global
+ENV PATH=$PATH:/home/app/.npm-global/bin
 
-# Cambiamos al usuario creado
-USER user_test
+# Cambiamos al usuario de node
+USER node
 
-RUN pnpm install \
+RUN npm install -g pnpm \
+    && pnpm install \
     && rm package.json pnpm-lock.yaml
 
 # Ejecutamos los tests
