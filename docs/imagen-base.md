@@ -26,9 +26,9 @@ Otra opción que podemos tomar, es la de instalar sistemas operativos limpios y,
 
 ## imagenes base de creadores verificados
 
-Como se dijo en clase, también se deben considerar las imágenes base que, aunque no sean oficiales, son de creadores verificados y que igual nos pueden ser útiles. Por ejemplo, tenemos una imagen creada por la empresa Bitnami en su versión para Node ([aquí](https://github.com/bitnami/containers/blob/main/bitnami/node/18/debian-11/Dockerfile) su Dockerfile), pero la descartamos pues ocupa más de 1 GB de memoria.
+Como se dijo en clase, también se deben considerar las imágenes base que, aunque no sean oficiales, son de creadores verificados y que igual nos pueden ser útiles. Por ejemplo, tenemos una imagen creada por la empresa Bitnami en su versión para Node ([aquí](https://github.com/bitnami/containers/blob/main/bitnami/node/18/debian-11/Dockerfile) su Dockerfile), pero la descartamos pues ocupa más de 700 MB de memoria.
 
-También podemos encontrar otras imágenes creadas por otras empresas como [bitnami/node](https://github.com/bitnami/containers/blob/main/bitnami/node/18/debian-11/Dockerfile) que ocupa 712.5MB, lo cual es demasiado, [wallarm/node](https://github.com/wallarm/docker-wallarm-node/blob/stable/4.4/Dockerfile) que ocupa unos 350 MB, [okteto/node](https://github.com/okteto/node-getting-started/blob/main/Dockerfile) que ocupa casi 1 GB (también influye que está basada en la imagen base oficial de Node) o [vmware/node](https://github.com/vmware-archive/node/blob/master/Dockerfile) con unos 160 MB, que también podría ser una buena opción.
+También podemos encontrar otras imágenes creadas por otras empresas como [wallarm/node](https://github.com/wallarm/docker-wallarm-node/blob/stable/4.4/Dockerfile) que ocupa unos 350 MB, [okteto/node](https://github.com/okteto/node-getting-started/blob/main/Dockerfile) que ocupa casi 1 GB (también influye que está basada en la imagen base oficial de Node) o [vmware/node](https://github.com/vmware-archive/node/blob/master/Dockerfile) con unos 160 MB, que también podría ser una buena opción.
 
 
 ## Imagen base elegida:
