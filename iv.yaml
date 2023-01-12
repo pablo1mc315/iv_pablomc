@@ -4,7 +4,7 @@ entidad: ./src/user.js
 
 automatizar:
   fichero: package.json
-  orden: pnpm run all
+  orden: pnpm run
 
 test: ./tests/test.js
 

@@ -1,15 +1,14 @@
 {
   "name": "iv_pablomc",
-  "version": "0.4.1",
+  "version": "0.5.3",
   "description": "Proyecto IV 22-23",
   "type": "module",
   "scripts": {
     "check": "node --check ./src/user.js && node --check ./src/film.js",
-    "test": "npx mocha",
-    "all": "npm run check && npm run test"
+    "test": "mocha"
   },
   "author": "Pablo Muñoz Castro",
-  "license": "GNU General Public License v3.0",
+  "license": "GPL-3.0-only",
   "devDependencies": {
     "mocha": "^10.1.0",
     "pnpm": "^7.18.2"
